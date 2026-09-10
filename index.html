@@ -1,0 +1,1425 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FDF6F9">
+  <title>The Amazing Prophetic Oracle of Fiduciary Fiscal Fuckery</title>
+  <link rel="manifest" href="oracle-v23.webmanifest">
+  <link rel="apple-touch-icon" href="oracle-icon-192-v23.png">
+  <style>
+    :root{
+      /* Wayward Creative foundation */
+      --paper:#FDF6F9;
+      --ink:#0D1140;
+      --muted:#74789A;
+
+      --afterglow-1:#FADCE8;
+      --afterglow-2:#F7BCCD;
+      --afterglow-3:#E6B3C6;
+      --afterglow-4:#D9A5BD;
+
+      --bluehour-1:#9AA0E9;
+      --bluehour-2:#ADA8EA;
+      --bluehour-3:#C4BFEC;
+
+      --seaglass-1:#BFE7DE;
+      --seaglass-2:#CDEFE8;
+      --seaglass-3:#DDF5EE;
+
+      --august-1:#FFF0BE;
+      --august-2:#F8D77A;
+      --august-3:#F4B942;
+
+      /* Existing semantic aliases, now fed by Wayward colours. */
+      --bg:#F2EFF8;
+      --page:var(--paper);
+      --pink-fill:var(--afterglow-1);
+      --pink-line:var(--afterglow-3);
+      --pink-strong:#A74470;
+      --teal-fill:var(--seaglass-3);
+      --teal-line:var(--seaglass-1);
+      --teal-ink:#285F5B;
+      --purple-fill:#F0EFFB;
+      --purple-line:var(--bluehour-2);
+      --purple-ink:#555A98;
+      --row:#FFF9FB;
+      --row-line:#E9D8E1;
+
+      /* Functional colours remain semantic rather than brand-forced. */
+      --positive:#237B58;
+      --negative:#AD2F69;
+
+      --disabled-fill:#EFEDF4;
+      --disabled-line:#D3D0DF;
+      --disabled-ink:#9290A3;
+
+      --shadow:0 12px 34px rgba(70,72,130,.12);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box}
+    html{background:var(--bg)}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:ui-rounded,"SF Pro Rounded",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(196,191,236,.38), transparent 31rem),
+        linear-gradient(180deg,#F2EFF8 0%,#F8F2F7 100%);
+      color:var(--ink);
+    }
+
+    button,input,select{font:inherit}
+    button{cursor:pointer}
+    svg{display:block}
+
+    .wrap{
+      width:min(100% - 22px, 760px);
+      margin:16px auto 28px;
+      padding:24px 20px 18px;
+      background:rgba(253,246,249,.98);
+      border-radius:34px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    /* ---------- header ---------- */
+    .top{
+      position:relative;
+      margin-bottom:10px;
+      padding:0 2px 2px;
+    }
+    .brand{
+      position:relative;
+      min-height:130px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .title-lockup{
+      position:relative;
+      width:min(100%,620px);
+      height:126px;
+      margin:0 auto;
+    }
+    .title{
+      position:relative;
+      margin:0;
+      width:100%;
+      height:100%;
+      color:var(--ink);
+      line-height:1;
+      font-weight:400;
+    }
+    .title-kicker{
+      position:absolute;
+      left:22%;
+      top:4px;
+      z-index:3;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(.73rem,2.4vw,.95rem);
+      font-weight:700;
+      letter-spacing:.055em;
+      text-transform:uppercase;
+      color:#30345f;
+      transform:rotate(-1deg);
+      white-space:nowrap;
+    }
+    .title-kicker::before,.title-kicker::after{
+      content:"✦";
+      color:#d986a8;
+      font-size:.7em;
+      vertical-align:.15em;
+      margin:0 .48em;
+    }
+    .title-prophetic{
+      position:absolute;
+      left:4%;
+      top:25px;
+      z-index:2;
+      display:block;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(2.35rem,7.5vw,3.75rem);
+      font-weight:700;
+      font-style:italic;
+      letter-spacing:-.06em;
+      color:#29275f;
+      white-space:nowrap;
+      transform:rotate(-1.2deg);
+      text-shadow:2px 2px 0 #c1caf1, 4px 4px 0 rgba(232,151,166,.28);
+    }
+    .title-oracle{
+      position:absolute;
+      right:20%;
+      top:69px;
+      z-index:4;
+      display:block;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(1.65rem,5.6vw,2.6rem);
+      font-weight:600;
+      font-style:italic;
+      letter-spacing:-.055em;
+      color:#5d5a9e;
+      white-space:nowrap;
+      transform:rotate(1.7deg);
+      text-shadow:1px 1px 0 #fff, 2px 2px 0 rgba(232,151,166,.32);
+    }
+    .title-oracle::before{
+      content:"";
+      position:absolute;
+      left:-38px;
+      top:52%;
+      width:34px;
+      height:14px;
+      border-top:2px solid #97a6e8;
+      border-radius:50%;
+      transform:rotate(-8deg);
+      opacity:.9;
+    }
+    .title-sub{
+      position:absolute;
+      left:16%;
+      bottom:0;
+      z-index:5;
+      display:block;
+      color:#d986a8;
+      font-family:"Segoe Print","Bradley Hand","Comic Sans MS",cursive;
+      font-size:clamp(.83rem,2.8vw,1.08rem);
+      font-weight:400;
+      font-style:italic;
+      line-height:1;
+      letter-spacing:-.03em;
+      white-space:nowrap;
+      transform:rotate(-1.4deg);
+    }
+    .crystal{
+      position:absolute;
+      z-index:3;
+      width:78px;
+      right:2%;
+      top:37px;
+      transform:rotate(1deg);
+      overflow:visible;
+      filter:drop-shadow(0 5px 8px rgba(96,104,167,.16));
+    }
+    .brand-swash{
+      position:absolute;
+      z-index:1;
+      left:2%;
+      top:80px;
+      width:50%;
+      height:28px;
+      border-bottom:2px solid rgba(151,166,232,.75);
+      border-radius:50%;
+      transform:rotate(-4deg);
+      pointer-events:none;
+    }
+    .brand-swash::after{
+      content:"✦";
+      position:absolute;
+      right:-5px;
+      bottom:-9px;
+      color:#e897a6;
+      font-size:.78rem;
+    }
+    .scribble{
+      font-family:"Comic Sans MS","Segoe Print","Bradley Hand",cursive;
+      font-weight:400;
+      font-style:italic;
+      color:#7884b6;
+      line-height:1.23;
+      letter-spacing:.01em;
+    }
+    /* ---------- top cards ---------- */
+    .summary{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin:0 0 14px;
+    }
+    .summary-card{
+      position:relative;
+      min-width:0;
+      border-radius:22px;
+      padding:12px 13px 11px;
+      border:1.5px solid;
+    }
+    .summary-card.current{
+      background:var(--teal-fill);
+      border-color:var(--teal-line);
+    }
+    .summary-card.projected{
+      background:var(--purple-fill);
+      border-color:var(--purple-line);
+    }
+    .summary-label{
+      font-size:.78rem;
+      color:#39406e;
+      margin-bottom:5px;
+      font-weight:430;
+    }
+    .summary-value{
+      font-size:clamp(1.42rem,5.8vw,2rem);
+      line-height:1;
+      font-weight:500;
+      letter-spacing:-.045em;
+      font-variant-numeric:tabular-nums;
+      white-space:nowrap;
+    }
+    .summary-date{
+      margin-top:5px;
+      font-size:.76rem;
+      color:#4d5688;
+      line-height:1.2;
+    }
+    .projection-date-hidden{
+      position:absolute;
+      opacity:0;
+      pointer-events:none;
+      width:1px;
+      height:1px;
+    }
+    .icon-btn{
+      border:0;
+      background:transparent;
+      color:#363968;
+      padding:5px;
+      border-radius:10px;
+      width:38px;
+      height:38px;
+      display:grid;
+      place-items:center;
+    }
+    .icon-btn:active{background:rgba(255,255,255,.55)}
+    .summary-card .icon-btn{
+      position:absolute;
+      top:7px;
+      right:7px;
+    }
+    .projection-control{
+      display:flex;
+      gap:5px;
+      align-items:center;
+      margin-top:7px;
+    }
+    #projectionDate{
+      appearance:none;
+      -webkit-appearance:none;
+      width:100%;
+      min-width:0;
+      padding:0;
+      border:0;
+      background:transparent;
+      color:#4d5688;
+      font-size:.76rem;
+      outline:none;
+    }
+
+    /* ---------- primary button ---------- */
+    .add-btn{
+      width:100%;
+      min-height:47px;
+      border:1.5px solid #f0b1c7;
+      border-radius:17px;
+      background:var(--pink-fill);
+      color:var(--ink);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      font-size:.78rem;
+      font-weight:520;
+      margin:0 0 11px;
+    }
+    .add-btn .plus{
+      font-size:1.6rem;
+      line-height:.8;
+      font-weight:300;
+    }
+
+    /* ---------- ledger ---------- */
+    .ledger-card{
+      position:relative;
+      background:#fffafb;
+      border:1.5px solid var(--purple-line);
+      border-radius:20px;
+      overflow:visible;
+    }
+    .ledger-head{
+      position:relative;
+      min-height:47px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:9px 12px;
+      background:linear-gradient(90deg,#ebeefb,#dfe5fb);
+      border-radius:18px 18px 0 0;
+    }
+    .ledger-title{
+      margin:0;
+      font-size:1.2rem;
+      font-weight:500;
+      letter-spacing:-.035em;
+    }
+    .ledger-phrase{
+      position:absolute;
+      z-index:5;
+      left:38%;
+      top:-5px;
+      width:57%;
+      margin:0;
+      padding:0;
+      font-size:1rem;
+      text-align:center;
+      line-height:1.04;
+      transform:rotate(3deg);
+      transform-origin:center;
+      pointer-events:none;
+      text-shadow:0 1px 0 rgba(255,255,255,.88);
+    }
+    .ledger-icons{
+      display:flex;
+      gap:9px;
+      color:#31355d;
+      opacity:.9;
+    }
+    .ledger-icons .ghost-icon{
+      width:28px;
+      height:28px;
+      display:grid;
+      place-items:center;
+    }
+
+    #ledger{
+      padding:12px 8px 8px;
+      border-radius:0 0 18px 18px;
+      overflow:hidden;
+    }
+
+    .tx-row{
+      --date-fill:var(--pink-fill);
+      --date-line:var(--pink-line);
+      display:grid;
+      grid-template-columns:62px minmax(0,1fr) auto 32px;
+      gap:8px;
+      align-items:center;
+      padding:6px 7px;
+      margin:0 0 6px;
+      min-height:76px;
+      border:1px solid var(--row-line);
+      border-radius:15px;
+      background:var(--row);
+    }
+    .tx-row:last-child{margin-bottom:0}
+    .tx-row:nth-child(3n+2){
+      --date-fill:var(--teal-fill);
+      --date-line:var(--teal-line);
+    }
+    .tx-row:nth-child(3n){
+      --date-fill:var(--purple-fill);
+      --date-line:var(--purple-line);
+    }
+    .tx-row.today{
+      box-shadow:inset 0 0 0 2px rgba(232,151,166,.25);
+    }
+    .date-card{
+      min-height:62px;
+      border-radius:12px;
+      background:var(--date-fill);
+      border:1.5px solid var(--date-line);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      line-height:1;
+      padding:6px 4px;
+      color:#20254e;
+    }
+    .date-card .mon{
+      font-size:.6rem;
+      letter-spacing:.045em;
+    }
+    .date-card .day{
+      font-size:1.35rem;
+      margin:3px 0 2px;
+      font-weight:500;
+    }
+    .date-card .dow{
+      font-size:.62rem;
+    }
+    .tx-main{min-width:0}
+    .tx-name{
+      font-size:.88rem;
+      font-weight:560;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+      margin-bottom:4px;
+    }
+    .tx-note{
+      color:#747ca6;
+      font-size:.66rem;
+      line-height:1.18;
+    }
+    .tx-money{
+      min-width:76px;
+      text-align:right;
+      font-variant-numeric:tabular-nums;
+    }
+    .tx-amount{
+      font-size:.86rem;
+      font-weight:560;
+      white-space:nowrap;
+      margin-bottom:4px;
+    }
+    .tx-amount.in{color:var(--positive)}
+    .tx-amount.out{color:var(--negative)}
+    .tx-balance{
+      font-size:.9rem;
+      color:#252a4f;
+      white-space:nowrap;
+    }
+    .editbtn{
+      border:0;
+      background:transparent;
+      color:#272b52;
+      padding:6px;
+      width:36px;
+      height:36px;
+      border-radius:10px;
+      display:grid;
+      place-items:center;
+    }
+    .editbtn:active{background:#f2e9ed}
+    .empty{
+      padding:28px 18px;
+      text-align:center;
+      color:var(--muted);
+      line-height:1.45;
+    }
+
+    /* ---------- utility footer ---------- */
+    .utilities{
+      display:grid;
+      grid-template-columns:1.5fr 1fr 1fr;
+      gap:7px;
+      margin:11px 2px 0;
+    }
+    .utility-btn,
+    .utility-label{
+      min-height:44px;
+      border-radius:15px;
+      border:1.5px solid;
+      background:#fff;
+      color:var(--ink);
+      padding:7px 8px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      font-size:.74rem;
+      font-weight:500;
+      text-align:center;
+    }
+    .utility-btn.starting{
+      background:var(--teal-fill);
+      border-color:var(--teal-line);
+    }
+    .utility-btn.export{
+      background:#fcedf2;
+      border-color:#efcad8;
+    }
+    .utility-label.import{
+      background:var(--purple-fill);
+      border-color:#b8c1f0;
+      cursor:pointer;
+    }
+
+    .footer{
+      position:relative;
+      min-height:92px;
+      margin-top:4px;
+      padding:8px 6px 0 6px;
+    }
+    .bank-note{
+      position:absolute;
+      right:1%;
+      top:34px;
+      width:44%;
+      max-width:300px;
+      color:#7a82ad;
+      font-size:.46rem;
+      line-height:1.28;
+      text-align:left;
+    }
+    .pill{
+      position:absolute;
+      right:1%;
+      bottom:7px;
+      border-radius:999px;
+      background:#e8eafb;
+      color:#555b8c;
+      padding:4px 9px;
+      font-size:.58rem;
+      letter-spacing:.01em;
+      white-space:nowrap;
+    }
+    .bottom-phrase{
+      position:absolute;
+      left:3%;
+      bottom:18px;
+      width:48%;
+      text-align:center;
+      font-size:1rem;
+      line-height:1.2;
+      transform:rotate(-4deg);
+      transform-origin:center;
+    }
+
+    /* ---------- dialogs ---------- */
+    dialog{
+      border:0;
+      border-radius:22px;
+      padding:0;
+      max-width:520px;
+      width:calc(100% - 24px);
+      background:#fffafb;
+      color:var(--ink);
+      box-shadow:0 25px 80px rgba(0,0,0,.28);
+    }
+    dialog::backdrop{background:rgba(35,28,45,.46)}
+    .modal{padding:18px}
+    .modal h2{margin:0 0 14px;font-size:1.2rem}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .field{margin-bottom:10px}
+    .field label{
+      display:block;
+      font-size:.78rem;
+      color:var(--muted);
+      margin:0 0 5px;
+    }
+    input,select{
+      width:100%;
+      padding:11px 12px;
+      border:1px solid #d9dced;
+      border-radius:12px;
+      background:white;
+      color:var(--ink);
+      font-size:16px;
+      transition:background-color .16s ease,border-color .16s ease,color .16s ease,opacity .16s ease;
+    }
+    #txOut{
+      background:#FFF9FB;
+      border-color:var(--afterglow-3);
+    }
+    #txIn{
+      background:#F7FCFA;
+      border-color:var(--seaglass-1);
+    }
+    #txOut:disabled,#txIn:disabled{
+      background:var(--disabled-fill);
+      border-color:var(--disabled-line);
+      color:var(--disabled-ink);
+      opacity:.78;
+      cursor:not-allowed;
+      -webkit-text-fill-color:var(--disabled-ink);
+    }
+    .modal-actions{
+      display:flex;
+      gap:8px;
+      justify-content:flex-end;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+    .modal-actions button{
+      border:0;
+      border-radius:13px;
+      padding:10px 13px;
+      min-height:44px;
+      background:#625d92;
+      color:white;
+      font-weight:620;
+    }
+    .modal-actions button.secondary{
+      background:#f6f1f3;
+      color:var(--ink);
+      border:1px solid #ddd3da;
+    }
+    .modal-actions button.danger{background:#a95868}
+    .note{
+      font-size:.76rem;
+      color:var(--muted);
+      line-height:1.4;
+    }
+
+    .sr-only{
+      position:absolute!important;
+      width:1px!important;
+      height:1px!important;
+      padding:0!important;
+      margin:-1px!important;
+      overflow:hidden!important;
+      clip:rect(0,0,0,0)!important;
+      white-space:nowrap!important;
+      border:0!important;
+    }
+
+    @media(max-width:560px){
+      .wrap{
+        width:calc(100% - 12px);
+        margin:6px auto 14px;
+        padding:16px 12px 12px;
+        border-radius:28px;
+      }
+      .top{margin-bottom:8px;padding:1px 0 0}
+      .brand{min-height:124px}
+      .title-lockup{width:100%;height:120px}
+      .title-kicker{left:20%;top:4px;font-size:.66rem}
+      .title-prophetic{left:2%;top:24px;font-size:2.35rem}
+      .title-oracle{right:19%;top:67px;font-size:1.72rem}
+      .title-sub{left:12%;bottom:0;font-size:.77rem}
+      .crystal{width:66px;right:-1%;top:39px}
+      .brand-swash{left:1%;top:76px;width:49%}
+      .pill{font-size:.52rem;padding:3px 7px}
+.summary{gap:7px;margin-bottom:10px}
+      .summary-card{padding:10px 9px 9px;border-radius:18px}
+      .summary-label{font-size:.67rem;margin-bottom:4px}
+      .summary-value{font-size:1.42rem}
+      .summary-date,#projectionDate{font-size:.63rem}
+      .summary-card .icon-btn{
+        width:29px;height:29px;top:5px;right:4px;
+      }
+      .summary-card .icon-btn svg{width:19px;height:19px}
+      .add-btn{min-height:44px;margin-bottom:10px;border-radius:16px;font-size:.82rem}
+      .add-btn .plus{font-size:1.45rem}
+      .ledger-head{min-height:44px;padding:8px 10px}
+      .ledger-title{font-size:1.08rem}
+      .ledger-phrase{left:35%;top:-5px;width:60%;font-size:.86rem}
+      #ledger{padding:5px 7px 7px}
+      .tx-row{
+        grid-template-columns:56px minmax(0,1fr) 70px 27px;
+        gap:6px;
+        min-height:70px;
+        padding:5px 6px;
+        border-radius:14px;
+      }
+      .date-card{min-height:58px;border-radius:11px}
+      .date-card .mon{font-size:.54rem}
+      .date-card .day{font-size:1.2rem}
+      .date-card .dow{font-size:.55rem}
+      .tx-name{font-size:.78rem}
+      .tx-note{font-size:.58rem}
+      .tx-money{min-width:68px}
+      .tx-amount{font-size:.75rem}
+      .tx-balance{font-size:.68rem}
+      .editbtn{width:27px;height:27px;padding:3px}
+      .editbtn svg{width:18px;height:18px}
+      .utilities{gap:5px;margin-top:9px}
+      .utility-btn,.utility-label{
+        min-height:41px;
+        padding:6px 4px;
+        font-size:.62rem;
+        gap:4px;
+        border-radius:13px;
+      }
+      .utility-btn svg,.utility-label svg{width:18px;height:18px}
+      .footer{min-height:88px;margin-top:2px;padding-left:6px}
+      .bank-note{font-size:.40rem;width:43%;right:0;top:33px}
+      .bottom-phrase{font-size:.86rem;width:48%;left:2%;right:auto;bottom:18px;transform:rotate(-4deg)}
+      .pill{right:0;bottom:5px}
+      .grid2{grid-template-columns:1fr}
+    }
+
+    @media(max-width:380px){
+      .title-lockup{height:116px}
+      .title-kicker{left:18%;top:4px;font-size:.61rem}
+      .title-prophetic{left:1%;top:24px;font-size:2.12rem}
+      .title-oracle{right:18%;top:64px;font-size:1.58rem}
+      .title-sub{left:8%;bottom:0;font-size:.69rem}
+      .crystal{width:61px;right:-2%;top:38px}
+      .brand-swash{top:73px;width:47%}
+      .ledger-phrase{left:33%;top:-5px;width:62%;font-size:.82rem}
+      .summary-value{font-size:1.3rem}
+      .tx-row{grid-template-columns:52px minmax(0,1fr) 64px 25px}
+      .tx-amount{font-size:.7rem}
+      .tx-balance{font-size:.64rem}
+      .utility-btn,.utility-label{font-size:.58rem}
+    }
+
+    /* v1.17: rendered title artwork */
+    .brand{min-height:0!important;}
+    .title-image-wrap{width:100%;display:flex;justify-content:center;align-items:center;margin:0 auto 8px;}
+    .title-image{display:block;width:100%;height:auto;object-fit:contain;}
+    @media(max-width:560px){.brand{min-height:0!important}.title-image-wrap{margin:0 auto 8px}.title-image{width:100%}}
+    @media(max-width:380px){.title-image-wrap{margin-bottom:7px}}
+
+    /* v1.20: footer phrase position/angle only */
+    .bank-note{
+      left:1%;
+      right:auto;
+      top:34px;
+      width:40%;
+      font-size:.40rem;
+    }
+    .pill{
+      left:1%;
+      right:auto;
+      bottom:7px;
+      padding:3px 7px;
+      font-size:.49rem;
+    }
+    .bottom-phrase{
+      left:auto;
+      right:1%;
+      bottom:18px;
+      width:52%;
+      font-size:1.14rem;
+      transform:rotate(2deg);
+    }
+    @media(max-width:560px){
+      .bank-note{left:0;right:auto;top:33px;width:40%;font-size:.36rem}
+      .pill{left:0;right:auto;bottom:5px;padding:3px 7px;font-size:.45rem}
+      .bottom-phrase{left:auto;right:5%;bottom:18px;width:53%;font-size:1rem;transform:rotate(2deg)}
+    }
+    @media(max-width:380px){
+      .bank-note{left:0;right:auto;top:33px;width:40%;font-size:.34rem}
+      .pill{left:0;right:auto;bottom:5px;padding:3px 6px;font-size:.43rem}
+      .bottom-phrase{left:auto;right:4%;bottom:17px;width:54%;font-size:.98rem;transform:rotate(2deg)}
+    }
+  
+    /* v1.20: give balance-card text a little more breathing room on the left */
+    .summary-card{padding-left:18px}
+    @media(max-width:520px){.summary-card{padding-left:14px}}
+
+  
+    /* ============================================================
+       ORACLE V2 / PASS 2 — Tiny Art Department
+       Art integration only. Functional Pass 1 logic remains intact.
+       ============================================================ */
+
+    /* Paper as surface, not generic app rectangle. */
+    body{
+      background:
+        radial-gradient(circle at 14% 0%, rgba(196,191,236,.34), transparent 30rem),
+        linear-gradient(180deg,#F2EFF8 0%,#F8F2F7 100%);
+    }
+    .wrap{
+      position:relative;
+      isolation:isolate;
+      background:var(--paper);
+    }
+    .wrap::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      pointer-events:none;
+      opacity:.34;
+      background-image:
+        radial-gradient(circle at 18% 24%, rgba(13,17,64,.035) 0 0.7px, transparent .9px),
+        radial-gradient(circle at 77% 64%, rgba(217,165,189,.06) 0 0.8px, transparent 1px),
+        linear-gradient(92deg, transparent 0 48%, rgba(13,17,64,.018) 49%, transparent 50%);
+      background-size:19px 23px, 27px 31px, 47px 47px;
+      mix-blend-mode:multiply;
+    }
+
+    /* Approved V2 masthead. */
+    .top{margin-bottom:8px}
+    .title-image-wrap{
+      width:min(100%,700px);
+      margin:0 auto 4px;
+    }
+    .title-image{
+      width:100%;
+      height:auto;
+      filter:drop-shadow(0 4px 8px rgba(13,17,64,.06));
+    }
+
+    /* Balance cards: art is decoration; controls remain real controls. */
+    .summary-card{
+      overflow:hidden;
+      min-height:112px;
+      display:flex;
+      align-items:center;
+      padding:13px 50px 12px 15px;
+    }
+    .summary-copy{
+      position:relative;
+      z-index:2;
+      min-width:0;
+      width:100%;
+    }
+    .summary-art{
+      position:absolute;
+      z-index:1;
+      pointer-events:none;
+      user-select:none;
+      object-fit:contain;
+      opacity:.94;
+      filter:drop-shadow(0 4px 5px rgba(13,17,64,.08));
+    }
+    .coins-art{
+      width:92px;
+      right:-11px;
+      bottom:-14px;
+      transform:rotate(1deg);
+    }
+    .crystal-art{
+      width:91px;
+      right:-10px;
+      bottom:-13px;
+      transform:rotate(-1deg);
+    }
+    .summary-card .icon-btn{
+      z-index:4;
+      background:rgba(253,246,249,.64);
+      backdrop-filter:blur(2px);
+      -webkit-backdrop-filter:blur(2px);
+    }
+
+    /* HANDMADE BORDER PROTOTYPE — CURRENT BALANCE ONLY.
+       Clean at normal distance; close inspection shows a second traced line. */
+    .summary-card.current{
+      border-width:1.5px;
+      overflow:visible;
+    }
+    .summary-card.current::after{
+      content:"";
+      position:absolute;
+      inset:2px -2px -2px 2px;
+      border:1px solid rgba(80,151,142,.33);
+      border-radius:20px 24px 21px 23px;
+      pointer-events:none;
+      transform:rotate(.10deg);
+      z-index:0;
+    }
+
+    /* Ledger shifts from glossy gradient toward printed-paper editorial. */
+    .ledger-card{
+      background:rgba(255,250,251,.76);
+      box-shadow:0 3px 0 rgba(13,17,64,.025);
+    }
+    .ledger-head{
+      background:
+        linear-gradient(90deg,rgba(196,191,236,.44),rgba(173,168,234,.29));
+    }
+    .ledger-title{
+      font-family:Georgia,"Times New Roman",serif;
+      font-weight:600;
+      letter-spacing:-.025em;
+    }
+    .tx-row{
+      background:rgba(255,249,251,.76);
+    }
+
+    /* Approved ripped-paper marginalia, replacing faux-script text. */
+    .footer{
+      min-height:106px;
+    }
+    .bottom-phrase{display:none!important}
+    .bottom-phrase-img{
+      position:absolute;
+      right:-1%;
+      bottom:10px;
+      width:55%;
+      height:auto;
+      object-fit:contain;
+      transform:rotate(1.3deg);
+      transform-origin:center;
+      pointer-events:none;
+      user-select:none;
+      filter:drop-shadow(0 2px 3px rgba(13,17,64,.05));
+    }
+
+    @media(max-width:560px){
+      .title-image-wrap{margin-bottom:3px}
+      .summary-card{
+        min-height:104px;
+        padding:11px 41px 10px 13px;
+      }
+      .coins-art{width:78px;right:-13px;bottom:-11px}
+      .crystal-art{width:76px;right:-11px;bottom:-9px}
+      .summary-card .icon-btn{
+        top:5px;
+        right:4px;
+      }
+      .footer{min-height:98px}
+      .bottom-phrase-img{
+        right:-2%;
+        bottom:8px;
+        width:58%;
+      }
+    }
+
+    @media(max-width:380px){
+      .summary-card{
+        min-height:100px;
+        padding-right:38px;
+      }
+      .coins-art{width:73px}
+      .crystal-art{width:71px}
+      .bottom-phrase-img{width:59%;right:-2%}
+    }
+
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <div class="title-image-wrap">
+        <img class="title-image" src="./oracle-v2-masthead.png" alt="The Amazing Prophetic Oracle of Fiduciary Fiscal Fuckery">
+      </div>
+    </div>
+  </header>
+
+  <section class="summary" aria-label="Balance summary">
+    <div class="summary-card current">
+      <img class="summary-art coins-art" src="./oracle-coins.png" alt="" aria-hidden="true">
+      <div class="summary-copy">
+        <div class="summary-label">Current balance</div>
+        <div class="summary-value" id="currentSummary">$0.00</div>
+        <div class="summary-date" id="currentDateLabel">as of today</div>
+      </div>
+      <button class="icon-btn" id="openingCardBtn" aria-label="Set starting balance" title="Set starting balance">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16.5V20h3.5L18.2 9.3l-3.5-3.5L4 16.5Zm16.7-9.7a1 1 0 0 0 0-1.4l-2.1-2.1a1 1 0 0 0-1.4 0l-1.6 1.6 3.5 3.5 1.6-1.6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="summary-card projected">
+      <img class="summary-art crystal-art" src="./oracle-crystal-ball.png" alt="" aria-hidden="true">
+      <div class="summary-copy">
+        <div class="summary-label">Projected balance</div>
+        <div class="summary-value" id="projectedSummary">$0.00</div>
+        <div class="summary-date" id="projectionDateLabel">as of Sep 9, 2026</div>
+      </div>
+      <input id="projectionDate" type="date" aria-label="Projected balance date" class="projection-date-hidden">
+      <button class="icon-btn" id="projectionCalendarBtn" aria-label="Choose projection date" title="Choose projection date">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2v3M18 2v3M3.5 8h17M5 4h14a2 2 0 0 1 2 2v14H3V6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 12h2M11 12h2M15 12h2M7 16h2M11 16h2M15 16h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <button class="add-btn" id="addBtn"><span class="plus">＋</span><span>Add Transaction</span></button>
+
+  <section class="ledger-card" aria-label="Transactions">
+    <div class="ledger-head">
+      <h2 class="ledger-title">Transactions</h2>
+    </div>
+    <div id="ledger" aria-live="polite"></div>
+  </section>
+
+  <div class="utilities">
+    <button class="utility-btn starting" id="openingBtn">
+      <svg width="21" height="21" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16.5V20h3.5L18.2 9.3l-3.5-3.5L4 16.5Zm16.7-9.7a1 1 0 0 0 0-1.4l-2.1-2.1a1 1 0 0 0-1.4 0l-1.6 1.6 3.5 3.5 1.6-1.6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <span>Set starting balance</span>
+    </button>
+    <button class="utility-btn export" id="exportBtn">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 15v5h14v-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Export</span>
+    </button>
+    <label class="utility-label import" for="importFile">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17V5m0 0 4 4m-4-4-4 4M5 9v11h14V9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Import</span>
+    </label>
+    <input id="importFile" type="file" accept="application/json" hidden>
+  </div>
+
+  <footer class="footer">
+<div class="bank-note">Weekend/Canada closures: income moves to previous banking day.<br>Debits move to following banking day.</div>
+    <img class="bottom-phrase-img" src="./oracle-les-mis-note.png" alt="only one impulse purchase? what is this, les mis?">
+    <div class="pill">v1.23 · local only</div>
+  </footer>
+</div>
+
+<dialog id="txDialog"><form method="dialog" class="modal" id="txForm">
+  <h2 id="txTitle">Add transaction</h2><input type="hidden" id="txId">
+  <div class="field"><label for="txName">Item</label><input id="txName" required placeholder="e.g. Mortgage, Gas, Sun Life"></div>
+  <div class="field"><label for="txDate">Nominal date</label><input id="txDate" type="date" required></div>
+  <div class="grid2">
+    <div class="field"><label for="txOut">Money out</label><input id="txOut" type="number" min="0" step="0.01" inputmode="decimal"></div>
+    <div class="field"><label for="txIn">Money in</label><input id="txIn" type="number" min="0" step="0.01" inputmode="decimal"></div>
+  </div>
+  <div class="field"><label for="txRepeat">Repeat</label><select id="txRepeat">
+    <option value="none">Does not repeat</option>
+    <option value="weekly">Weekly</option>
+    <option value="biweekly">Every 2 weeks</option>
+    <option value="monthly">Monthly on this day</option>
+    <option value="lastday">Monthly — last day of month</option>
+  </select></div>
+  <div class="field" id="repeatUntilWrap" style="display:none"><label for="txUntil">Generate through</label><input id="txUntil" type="date"></div>
+  <div class="note">Banking-day adjustment is automatic: income moves backward; debits move forward. If both money-in and money-out are filled, the nominal date is kept.</div>
+  <div class="modal-actions">
+    <button type="button" class="danger" id="deleteBtn" style="display:none">Delete</button>
+    <button type="button" class="secondary" id="cancelTx">Cancel</button>
+    <button type="submit">Save</button>
+  </div>
+</form></dialog>
+
+<dialog id="openingDialog"><form method="dialog" class="modal" id="openingForm">
+  <h2>Starting balance</h2>
+  <div class="field"><label for="openingDate">As of date</label><input id="openingDate" type="date" required></div>
+  <div class="field"><label for="openingBalance">Chequing balance</label><input id="openingBalance" type="number" step="0.01" inputmode="decimal" required></div>
+  <div class="note">This is your baseline balance. Transactions before this date are ignored in the running balance.</div>
+  <div class="modal-actions"><button type="button" class="secondary" id="cancelOpening">Cancel</button><button type="submit">Save</button></div>
+</form></dialog>
+
+<script>
+(()=>{
+const KEY="chequebook-prophecy-v1"; // DO NOT CHANGE: keeps existing data across the redesign.
+const PROJECTION_KEY="chequebook-prophecy-projection-date";
+const bankingClosures=new Set([
+  // Payments Canada published 2026 system closures.
+  "2026-01-01","2026-04-03","2026-05-18","2026-07-01","2026-09-07","2026-09-30","2026-10-12","2026-11-11","2026-12-25","2026-12-28",
+  // Expected 2027 federal banking closures; Payments Canada had not yet published its 2027 schedule as of Sep 10, 2026.
+  "2027-01-01","2027-03-26","2027-05-24","2027-07-01","2027-09-06","2027-09-30","2027-10-11","2027-11-11","2027-12-27","2027-12-28"
+]);
+
+const todayISO=()=>{
+  const d=new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+};
+
+let state=load();
+
+function load(){
+  try{
+    const x=JSON.parse(localStorage.getItem(KEY));
+    if(x&&Array.isArray(x.transactions))return x;
+  }catch(e){}
+  return{openingBalance:0,openingDate:todayISO(),transactions:[]};
+}
+
+function save(){
+  localStorage.setItem(KEY,JSON.stringify(state));
+  render();
+}
+
+function parseISO(s){
+  const[y,m,d]=s.split("-").map(Number);
+  return new Date(Date.UTC(y,m-1,d));
+}
+function fmtISO(d){
+  return `${d.getUTCFullYear()}-${String(d.getUTCMonth()+1).padStart(2,"0")}-${String(d.getUTCDate()).padStart(2,"0")}`;
+}
+function addDays(s,n){
+  const d=parseISO(s);d.setUTCDate(d.getUTCDate()+n);return fmtISO(d);
+}
+function daysInMonth(y,m){return new Date(Date.UTC(y,m,0)).getUTCDate()}
+function isBusinessDay(s){
+  const d=parseISO(s),dow=d.getUTCDay();
+  return dow!==0&&dow!==6&&!bankingClosures.has(s);
+}
+function adjustedDate(tx){
+  const out=Number(tx.out)||0,inc=Number(tx.in)||0;
+  if((out>0&&inc>0)||(out===0&&inc===0))return tx.date;
+  let d=tx.date,g=0;
+  if(inc>0){
+    while(!isBusinessDay(d)&&g++<10)d=addDays(d,-1);
+  }else{
+    while(!isBusinessDay(d)&&g++<10)d=addDays(d,1);
+  }
+  return d;
+}
+function nextMonthlySameDay(s,originalDay){
+  const d=parseISO(s);
+  let y=d.getUTCFullYear(),m=d.getUTCMonth()+2;
+  if(m===13){m=1;y++}
+  const day=Math.min(originalDay,daysInMonth(y,m));
+  return `${y}-${String(m).padStart(2,"0")}-${String(day).padStart(2,"0")}`;
+}
+function nextLastDay(s){
+  const d=parseISO(s);
+  let y=d.getUTCFullYear(),m=d.getUTCMonth()+2;
+  if(m===13){m=1;y++}
+  const day=daysInMonth(y,m);
+  return `${y}-${String(m).padStart(2,"0")}-${String(day).padStart(2,"0")}`;
+}
+function expandTransactions(){
+  const rows=[];
+  state.transactions.forEach(tx=>{
+    const repeat=tx.repeat||"none";
+    if(repeat==="none"){
+      rows.push({...tx,instanceDate:tx.date,parentId:tx.id,generated:false});
+      return;
+    }
+    const until=tx.until||addDays(tx.date,365);
+    let cur=tx.date,count=0;
+    const originalDay=parseISO(tx.date).getUTCDate();
+    while(cur<=until&&count++<400){
+      rows.push({...tx,id:`${tx.id}__${cur}`,instanceDate:cur,date:cur,parentId:tx.id,generated:true});
+      if(repeat==="weekly")cur=addDays(cur,7);
+      else if(repeat==="biweekly")cur=addDays(cur,14);
+      else if(repeat==="monthly")cur=nextMonthlySameDay(cur,originalDay);
+      else if(repeat==="lastday")cur=nextLastDay(cur);
+      else break;
+    }
+  });
+  return rows
+    .map((r,sourceOrder)=>({...r,effectiveDate:adjustedDate(r),sourceOrder}))
+    .filter(r=>r.effectiveDate>=state.openingDate)
+    .sort((a,b)=>{
+      const dateOrder=a.effectiveDate.localeCompare(b.effectiveDate);
+      if(dateOrder)return dateOrder;
+      const directionRank=tx=>{
+        const inc=Number(tx.in)||0,out=Number(tx.out)||0;
+        if(inc>0&&out<=0)return 0; // credits first
+        if(out>0&&inc<=0)return 1; // then debits
+        return 2;                  // legacy mixed/blank records last, unchanged
+      };
+      return directionRank(a)-directionRank(b)||a.sourceOrder-b.sourceOrder;
+    });
+}
+function money(n){
+  return new Intl.NumberFormat("en-CA",{style:"currency",currency:"CAD"}).format(Number(n)||0);
+}
+function prettyDate(s){
+  return new Intl.DateTimeFormat("en-CA",{month:"short",day:"numeric",year:"numeric",timeZone:"UTC"}).format(parseISO(s));
+}
+function dateParts(s){
+  const d=parseISO(s);
+  return {
+    mon:new Intl.DateTimeFormat("en-CA",{month:"short",timeZone:"UTC"}).format(d).toUpperCase(),
+    day:d.getUTCDate(),
+    dow:new Intl.DateTimeFormat("en-CA",{weekday:"short",timeZone:"UTC"}).format(d)
+  };
+}
+function esc(s){
+  return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));
+}
+function repeatLabel(repeat){
+  return ({
+    weekly:"Repeats weekly",
+    biweekly:"Repeats every 2 weeks",
+    monthly:"Repeats monthly",
+    lastday:"Repeats monthly · last day"
+  })[repeat]||"";
+}
+
+function computeBalanceThrough(rows,date){
+  let bal=Number(state.openingBalance)||0;
+  for(const r of rows){
+    if(r.effectiveDate>date)break;
+    bal+=(Number(r.in)||0)-(Number(r.out)||0);
+  }
+  return bal;
+}
+
+function ensureProjectionDate(){
+  const input=document.getElementById("projectionDate");
+  const stored=localStorage.getItem(PROJECTION_KEY);
+  let chosen=stored||todayISO();
+  if(chosen<state.openingDate)chosen=state.openingDate;
+  input.min=state.openingDate;
+  input.value=chosen;
+  return chosen;
+}
+
+function render(){
+  const rows=expandTransactions();
+  const today=todayISO();
+
+  const current=computeBalanceThrough(rows,today);
+  const projectionInput=document.getElementById("projectionDate");
+  let projectionDate=projectionInput.value||localStorage.getItem(PROJECTION_KEY)||today;
+  if(projectionDate<state.openingDate)projectionDate=state.openingDate;
+  projectionInput.min=state.openingDate;
+  projectionInput.value=projectionDate;
+  const projected=computeBalanceThrough(rows,projectionDate);
+
+  let bal=Number(state.openingBalance)||0;
+  const html=rows.map(r=>{
+    bal+=(Number(r.in)||0)-(Number(r.out)||0);
+    const adjusted=r.effectiveDate!==r.instanceDate;
+    const p=dateParts(r.effectiveDate);
+    const amount=(Number(r.in)||0)>0 ? Number(r.in)||0 : -(Number(r.out)||0);
+    const note=adjusted
+      ? `from ${prettyDate(r.instanceDate)}<br>(weekend adjustment)`
+      : (r.generated||r.repeat!=="none" ? repeatLabel(r.repeat) : "");
+    return `<article class="tx-row ${r.effectiveDate===today?"today":""}">
+      <div class="date-card" aria-label="${esc(prettyDate(r.effectiveDate))}">
+        <div class="mon">${esc(p.mon)}</div>
+        <div class="day">${p.day}</div>
+        <div class="dow">${esc(p.dow)}</div>
+      </div>
+      <div class="tx-main">
+        <div class="tx-name" title="${esc(r.name)}">${esc(r.name)}</div>
+        ${note?`<div class="tx-note">${note}</div>`:""}
+      </div>
+      <div class="tx-money">
+        <div class="tx-amount ${amount>=0?"in":"out"}">${amount>=0?"+":""}${money(amount)}</div>
+        <div class="tx-balance">${money(bal)}</div>
+      </div>
+      <button class="editbtn" data-parent="${r.parentId}" aria-label="Edit ${esc(r.name)}">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16.5V20h3.5L18.2 9.3l-3.5-3.5L4 16.5Zm16.7-9.7a1 1 0 0 0 0-1.4l-2.1-2.1a1 1 0 0 0-1.4 0l-1.6 1.6 3.5 3.5 1.6-1.6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      </button>
+    </article>`;
+  }).join("");
+
+  document.getElementById("ledger").innerHTML=html||'<div class="empty">No transactions yet. Add one and the prophecy begins. 🔮</div>';
+  document.getElementById("currentSummary").textContent=money(current);
+  document.getElementById("currentDateLabel").textContent=`as of ${prettyDate(today)}`;
+  document.getElementById("projectedSummary").textContent=money(projected);
+  document.getElementById("projectionDateLabel").textContent=`as of ${prettyDate(projectionDate)}`;
+
+  document.querySelectorAll(".editbtn").forEach(b=>b.addEventListener("click",()=>openEdit(b.dataset.parent)));
+}
+
+const txDialog=document.getElementById("txDialog");
+const txForm=document.getElementById("txForm");
+const repeatSel=document.getElementById("txRepeat");
+const txOut=document.getElementById("txOut");
+const txIn=document.getElementById("txIn");
+
+function syncMoneyDirection(){
+  const outHasValue=txOut.value.trim()!=="";
+  const inHasValue=txIn.value.trim()!=="";
+
+  // Imported/legacy mixed-direction rows remain visible and editable until the
+  // user chooses which side to clear. We never silently alter stored data.
+  if(outHasValue&&inHasValue){
+    txOut.disabled=false;
+    txIn.disabled=false;
+    return;
+  }
+  txOut.disabled=inHasValue;
+  txIn.disabled=outHasValue;
+}
+
+txOut.addEventListener("input",syncMoneyDirection);
+txIn.addEventListener("input",syncMoneyDirection);
+
+function toggleUntil(){
+  document.getElementById("repeatUntilWrap").style.display=repeatSel.value==="none"?"none":"block";
+}
+repeatSel.addEventListener("change",toggleUntil);
+
+document.getElementById("addBtn").addEventListener("click",()=>{
+  txForm.reset();
+  document.getElementById("txId").value="";
+  document.getElementById("txTitle").textContent="Add transaction";
+  document.getElementById("txDate").value=todayISO();
+  document.getElementById("deleteBtn").style.display="none";
+  syncMoneyDirection();
+  toggleUntil();
+  txDialog.showModal();
+});
+
+function openEdit(id){
+  const tx=state.transactions.find(t=>t.id===id);
+  if(!tx)return;
+  document.getElementById("txId").value=tx.id;
+  document.getElementById("txTitle").textContent="Edit transaction";
+  document.getElementById("txName").value=tx.name;
+  document.getElementById("txDate").value=tx.date;
+  document.getElementById("txOut").value=tx.out||"";
+  document.getElementById("txIn").value=tx.in||"";
+  document.getElementById("txRepeat").value=tx.repeat||"none";
+  document.getElementById("txUntil").value=tx.until||"";
+  document.getElementById("deleteBtn").style.display="inline-block";
+  syncMoneyDirection();
+  toggleUntil();
+  txDialog.showModal();
+}
+
+txForm.addEventListener("submit",e=>{
+  e.preventDefault();
+  const name=document.getElementById("txName").value.trim();
+  const date=document.getElementById("txDate").value;
+  const out=Number(txOut.value)||0;
+  const inc=Number(txIn.value)||0;
+  if(!name||!date){alert("Please add an item name and date.");return}
+  if(out<=0&&inc<=0){alert("Enter money out or money in.");return}
+  if(out>0&&inc>0){alert("One transaction can be money out or money in, not both. Clear one amount to continue.");return}
+  const id=document.getElementById("txId").value||(crypto.randomUUID?crypto.randomUUID():String(Date.now()));
+  const repeat=document.getElementById("txRepeat").value;
+  const until=repeat==="none"?"":(document.getElementById("txUntil").value||addDays(date,365));
+  const tx={id,name,date,out,in:inc,repeat,until};
+  const idx=state.transactions.findIndex(t=>t.id===id);
+  if(idx>=0)state.transactions[idx]=tx;
+  else state.transactions.push(tx);
+  txDialog.close();
+  save();
+});
+
+document.getElementById("deleteBtn").addEventListener("click",()=>{
+  const id=document.getElementById("txId").value;
+  const tx=state.transactions.find(t=>t.id===id);
+  if(tx&&confirm(`Delete "${tx.name}"${tx.repeat!=="none"?" and its future recurring entries":""}?`)){
+    state.transactions=state.transactions.filter(t=>t.id!==id);
+    txDialog.close();
+    save();
+  }
+});
+document.getElementById("cancelTx").addEventListener("click",()=>txDialog.close());
+
+const openingDialog=document.getElementById("openingDialog");
+function openOpening(){
+  document.getElementById("openingDate").value=state.openingDate||todayISO();
+  document.getElementById("openingBalance").value=state.openingBalance||0;
+  openingDialog.showModal();
+}
+document.getElementById("openingBtn").addEventListener("click",openOpening);
+document.getElementById("openingCardBtn").addEventListener("click",openOpening);
+
+document.getElementById("openingForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  state.openingDate=document.getElementById("openingDate").value;
+  state.openingBalance=Number(document.getElementById("openingBalance").value)||0;
+  const projection=document.getElementById("projectionDate");
+  if(projection.value<state.openingDate){
+    projection.value=state.openingDate;
+    localStorage.setItem(PROJECTION_KEY,state.openingDate);
+  }
+  openingDialog.close();
+  save();
+});
+document.getElementById("cancelOpening").addEventListener("click",()=>openingDialog.close());
+
+const projectionDate=document.getElementById("projectionDate");
+projectionDate.addEventListener("change",()=>{
+  if(projectionDate.value){
+    localStorage.setItem(PROJECTION_KEY,projectionDate.value);
+    render();
+  }
+});
+document.getElementById("projectionCalendarBtn").addEventListener("click",()=>{
+  if(typeof projectionDate.showPicker==="function")projectionDate.showPicker();
+  else projectionDate.focus();
+});
+
+document.getElementById("exportBtn").addEventListener("click",()=>{
+  const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement("a");
+  a.href=url;
+  a.download=`chequebook-prophecy-backup-${todayISO()}.json`;
+  a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),500);
+});
+
+document.getElementById("importFile").addEventListener("change",async e=>{
+  const f=e.target.files?.[0];
+  if(!f)return;
+  try{
+    const x=JSON.parse(await f.text());
+    if(!x||!Array.isArray(x.transactions))throw new Error();
+    if(confirm("Replace this app's current data with the imported backup?")){
+      state=x;
+      save();
+    }
+  }catch(err){
+    alert("That file does not look like a valid Prophetic Oracle backup.");
+  }
+  e.target.value="";
+});
+
+ensureProjectionDate();
+if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
+render();
+})();
+</script>
+</body>
+</html>
