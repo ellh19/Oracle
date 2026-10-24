@@ -1,0 +1,21 @@
+{
+  "name": "Oracle",
+  "short_name": "Oracle",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FDF6F9",
+  "theme_color": "#FDF6F9",
+  "icons": [
+    {
+      "src": "oracle-app-icon-192-v27.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "oracle-app-icon-512-v27.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
