@@ -1,0 +1,2087 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FDF6F9">
+  <title>The Amazing Prophetic Oracle of Fiduciary Fiscal Fuckery</title>
+  <link rel="manifest" href="oracle-v54.webmanifest">
+  <link rel="apple-touch-icon" href="oracle-app-icon-192-v25.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="oracle-app-icon-192-v25.png">
+  <style>
+    :root{
+      /* Wayward Creative foundation */
+      --paper:#FDF6F9;
+      --ink:#0D1140;
+      --muted:#74789A;
+
+      --afterglow-1:#FADCE8;
+      --afterglow-2:#F7BCCD;
+      --afterglow-3:#E6B3C6;
+      --afterglow-4:#D9A5BD;
+
+      --bluehour-1:#9AA0E9;
+      --bluehour-2:#ADA8EA;
+      --bluehour-3:#C4BFEC;
+
+      --seaglass-1:#BFE7DE;
+      --seaglass-2:#CDEFE8;
+      --seaglass-3:#DDF5EE;
+
+      --august-1:#FFF0BE;
+      --august-2:#F8D77A;
+      --august-3:#F4B942;
+
+      /* Existing semantic aliases, now fed by Wayward colours. */
+      --bg:#F2EFF8;
+      --page:var(--paper);
+      --pink-fill:var(--afterglow-1);
+      --pink-line:var(--afterglow-3);
+      --pink-strong:#A74470;
+      --teal-fill:var(--seaglass-3);
+      --teal-line:var(--seaglass-1);
+      --teal-ink:#285F5B;
+      --purple-fill:#F0EFFB;
+      --purple-line:var(--bluehour-2);
+      --purple-ink:#555A98;
+      --row:#FFF9FB;
+      --row-line:#E9D8E1;
+
+      /* Functional colours remain semantic rather than brand-forced. */
+      --positive:#237B58;
+      --negative:#AD2F69;
+
+      --disabled-fill:#EFEDF4;
+      --disabled-line:#D3D0DF;
+      --disabled-ink:#9290A3;
+
+      --shadow:0 12px 34px rgba(70,72,130,.12);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box}
+    html{background:var(--bg)}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:ui-rounded,"SF Pro Rounded",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(196,191,236,.38), transparent 31rem),
+        linear-gradient(180deg,#F2EFF8 0%,#F8F2F7 100%);
+      color:var(--ink);
+    }
+
+    button,input,select{font:inherit}
+    button{cursor:pointer}
+    svg{display:block}
+
+    .wrap{
+      width:min(100% - 22px, 760px);
+      margin:16px auto 28px;
+      padding:24px 20px 18px;
+      background:rgba(253,246,249,.98);
+      border-radius:34px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    /* ---------- header ---------- */
+    .top{
+      position:relative;
+      margin-bottom:10px;
+      padding:0 2px 2px;
+    }
+    .brand{
+      position:relative;
+      min-height:130px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .title-lockup{
+      position:relative;
+      width:min(100%,620px);
+      height:126px;
+      margin:0 auto;
+    }
+    .title{
+      position:relative;
+      margin:0;
+      width:100%;
+      height:100%;
+      color:var(--ink);
+      line-height:1;
+      font-weight:400;
+    }
+    .title-kicker{
+      position:absolute;
+      left:22%;
+      top:4px;
+      z-index:3;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(.73rem,2.4vw,.95rem);
+      font-weight:700;
+      letter-spacing:.055em;
+      text-transform:uppercase;
+      color:#30345f;
+      transform:rotate(-1deg);
+      white-space:nowrap;
+    }
+    .title-kicker::before,.title-kicker::after{
+      content:"✦";
+      color:#d986a8;
+      font-size:.7em;
+      vertical-align:.15em;
+      margin:0 .48em;
+    }
+    .title-prophetic{
+      position:absolute;
+      left:4%;
+      top:25px;
+      z-index:2;
+      display:block;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(2.35rem,7.5vw,3.75rem);
+      font-weight:700;
+      font-style:italic;
+      letter-spacing:-.06em;
+      color:#29275f;
+      white-space:nowrap;
+      transform:rotate(-1.2deg);
+      text-shadow:2px 2px 0 #c1caf1, 4px 4px 0 rgba(232,151,166,.28);
+    }
+    .title-oracle{
+      position:absolute;
+      right:20%;
+      top:69px;
+      z-index:4;
+      display:block;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(1.65rem,5.6vw,2.6rem);
+      font-weight:600;
+      font-style:italic;
+      letter-spacing:-.055em;
+      color:#5d5a9e;
+      white-space:nowrap;
+      transform:rotate(1.7deg);
+      text-shadow:1px 1px 0 #fff, 2px 2px 0 rgba(232,151,166,.32);
+    }
+    .title-oracle::before{
+      content:"";
+      position:absolute;
+      left:-38px;
+      top:52%;
+      width:34px;
+      height:14px;
+      border-top:2px solid #97a6e8;
+      border-radius:50%;
+      transform:rotate(-8deg);
+      opacity:.9;
+    }
+    .title-sub{
+      position:absolute;
+      left:16%;
+      bottom:0;
+      z-index:5;
+      display:block;
+      color:#d986a8;
+      font-family:"Segoe Print","Bradley Hand","Comic Sans MS",cursive;
+      font-size:clamp(.83rem,2.8vw,1.08rem);
+      font-weight:400;
+      font-style:italic;
+      line-height:1;
+      letter-spacing:-.03em;
+      white-space:nowrap;
+      transform:rotate(-1.4deg);
+    }
+    .crystal{
+      position:absolute;
+      z-index:3;
+      width:78px;
+      right:2%;
+      top:37px;
+      transform:rotate(1deg);
+      overflow:visible;
+      filter:drop-shadow(0 5px 8px rgba(96,104,167,.16));
+    }
+    .brand-swash{
+      position:absolute;
+      z-index:1;
+      left:2%;
+      top:80px;
+      width:50%;
+      height:28px;
+      border-bottom:2px solid rgba(151,166,232,.75);
+      border-radius:50%;
+      transform:rotate(-4deg);
+      pointer-events:none;
+    }
+    .brand-swash::after{
+      content:"✦";
+      position:absolute;
+      right:-5px;
+      bottom:-9px;
+      color:#e897a6;
+      font-size:.78rem;
+    }
+    .scribble{
+      font-family:"Comic Sans MS","Segoe Print","Bradley Hand",cursive;
+      font-weight:400;
+      font-style:italic;
+      color:#7884b6;
+      line-height:1.23;
+      letter-spacing:.01em;
+    }
+    /* ---------- top cards ---------- */
+    .summary{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin:0 0 14px;
+    }
+    .summary-card{
+      position:relative;
+      min-width:0;
+      border-radius:22px;
+      padding:12px 13px 11px;
+      border:1.5px solid;
+    }
+    .summary-card.current{
+      background:var(--teal-fill);
+      border-color:var(--teal-line);
+    }
+    .summary-card.projected{
+      background:var(--purple-fill);
+      border-color:var(--purple-line);
+    }
+    .summary-label{
+      font-size:.78rem;
+      color:#39406e;
+      margin-bottom:5px;
+      font-weight:430;
+    }
+    .summary-value{
+      font-size:clamp(1.42rem,5.8vw,2rem);
+      line-height:1;
+      font-weight:500;
+      letter-spacing:-.045em;
+      font-variant-numeric:tabular-nums;
+      white-space:nowrap;
+    }
+    .summary-date{
+      margin-top:5px;
+      font-size:.76rem;
+      color:#4d5688;
+      line-height:1.2;
+    }
+    .projection-date-hidden{
+      position:absolute;
+      opacity:0;
+      pointer-events:none;
+      width:1px;
+      height:1px;
+    }
+    .icon-btn{
+      border:0;
+      background:transparent;
+      color:#363968;
+      padding:5px;
+      border-radius:10px;
+      width:38px;
+      height:38px;
+      display:grid;
+      place-items:center;
+    }
+    .icon-btn:active{background:rgba(255,255,255,.55)}
+    .summary-card .icon-btn{
+      position:absolute;
+      top:7px;
+      right:7px;
+    }
+    .projection-control{
+      display:flex;
+      gap:5px;
+      align-items:center;
+      margin-top:7px;
+    }
+    #projectionDate{
+      appearance:none;
+      -webkit-appearance:none;
+      width:100%;
+      min-width:0;
+      padding:0;
+      border:0;
+      background:transparent;
+      color:#4d5688;
+      font-size:.76rem;
+      outline:none;
+    }
+
+    /* ---------- primary button ---------- */
+    .add-btn{
+      width:100%;
+      min-height:47px;
+      border:1.5px solid #f0b1c7;
+      border-radius:17px;
+      background:var(--pink-fill);
+      color:var(--ink);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      font-size:.78rem;
+      font-weight:520;
+      margin:0 0 11px;
+    }
+    .add-btn .plus{
+      font-size:1.6rem;
+      line-height:.8;
+      font-weight:300;
+    }
+
+    /* ---------- ledger ---------- */
+    .ledger-card{
+      position:relative;
+      background:#fffafb;
+      border:1.5px solid var(--purple-line);
+      border-radius:20px;
+      overflow:visible;
+    }
+    .ledger-head{
+      position:relative;
+      min-height:47px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:9px 12px;
+      background:linear-gradient(90deg,#ebeefb,#dfe5fb);
+      border-radius:18px 18px 0 0;
+    }
+    .ledger-title{
+      margin:0;
+      font-size:1.2rem;
+      font-weight:500;
+      letter-spacing:-.035em;
+    }
+    .ledger-phrase{
+      position:absolute;
+      z-index:5;
+      left:38%;
+      top:-5px;
+      width:57%;
+      margin:0;
+      padding:0;
+      font-size:1rem;
+      text-align:center;
+      line-height:1.04;
+      transform:rotate(3deg);
+      transform-origin:center;
+      pointer-events:none;
+      text-shadow:0 1px 0 rgba(255,255,255,.88);
+    }
+    .ledger-icons{
+      display:flex;
+      gap:9px;
+      color:#31355d;
+      opacity:.9;
+    }
+    .ledger-icons .ghost-icon{
+      width:28px;
+      height:28px;
+      display:grid;
+      place-items:center;
+    }
+
+    #ledger{
+      padding:12px 8px 8px;
+      border-radius:0 0 18px 18px;
+      overflow:hidden;
+    }
+
+    .tx-row{
+      --date-fill:var(--pink-fill);
+      --date-line:var(--pink-line);
+      display:grid;
+      grid-template-columns:62px minmax(0,1fr) auto 32px;
+      gap:8px;
+      align-items:center;
+      padding:6px 7px;
+      margin:0 0 6px;
+      min-height:76px;
+      border:1px solid var(--row-line);
+      border-radius:15px;
+      background:var(--row);
+    }
+    .tx-row:last-child{margin-bottom:0}
+    .tx-row:nth-child(3n+2){
+      --date-fill:var(--teal-fill);
+      --date-line:var(--teal-line);
+    }
+    .tx-row:nth-child(3n){
+      --date-fill:var(--purple-fill);
+      --date-line:var(--purple-line);
+    }
+    .tx-row.today{
+      box-shadow:inset 0 0 0 2px rgba(232,151,166,.25);
+    }
+    .date-card{
+      min-height:62px;
+      border-radius:12px;
+      background:var(--date-fill);
+      border:1.5px solid var(--date-line);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      line-height:1;
+      padding:6px 4px;
+      color:#20254e;
+    }
+    .date-card .mon{
+      font-size:.6rem;
+      letter-spacing:.045em;
+    }
+    .date-card .day{
+      font-size:1.35rem;
+      margin:3px 0 2px;
+      font-weight:500;
+    }
+    .date-card .dow{
+      font-size:.62rem;
+    }
+    .date-card .year{
+      font-size:.52rem;
+      margin-top:3px;
+    }
+    .tx-main{min-width:0}
+    .tx-name{
+      font-size:.88rem;
+      font-weight:560;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+      margin-bottom:4px;
+    }
+    .tx-note{
+      color:#747ca6;
+      font-size:.66rem;
+      line-height:1.18;
+    }
+    .tx-money{
+      min-width:76px;
+      text-align:right;
+      font-variant-numeric:tabular-nums;
+    }
+    .tx-amount{
+      font-size:.86rem;
+      font-weight:560;
+      white-space:nowrap;
+      margin-bottom:4px;
+    }
+    .tx-amount.in{color:var(--positive)}
+    .tx-amount.out{color:var(--negative)}
+    .tx-balance{
+      font-size:.9rem;
+      color:#252a4f;
+      white-space:nowrap;
+    }
+    .editbtn{
+      border:0;
+      background:transparent;
+      color:#272b52;
+      padding:6px;
+      width:36px;
+      height:36px;
+      border-radius:10px;
+      display:grid;
+      place-items:center;
+    }
+    .editbtn:active{background:#f2e9ed}
+    .empty{
+      padding:28px 18px;
+      text-align:center;
+      color:var(--muted);
+      line-height:1.45;
+    }
+
+    /* ---------- utility footer ---------- */
+    .utilities{
+      display:grid;
+      grid-template-columns:1.5fr 1fr 1fr;
+      gap:7px;
+      margin:11px 2px 0;
+    }
+    .utility-btn,
+    .utility-label{
+      min-height:44px;
+      border-radius:15px;
+      border:1.5px solid;
+      background:#fff;
+      color:var(--ink);
+      padding:7px 8px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      font-size:.74rem;
+      font-weight:500;
+      text-align:center;
+    }
+    .utility-btn.starting{
+      background:var(--teal-fill);
+      border-color:var(--teal-line);
+    }
+    .utility-btn.export{
+      background:#fcedf2;
+      border-color:#efcad8;
+    }
+    .utility-label.import{
+      background:var(--purple-fill);
+      border-color:#b8c1f0;
+      cursor:pointer;
+    }
+
+    .footer{
+      position:relative;
+      min-height:92px;
+      margin-top:4px;
+      padding:8px 6px 0 6px;
+    }
+    .bank-note{
+      position:absolute;
+      right:1%;
+      top:34px;
+      width:44%;
+      max-width:300px;
+      color:#7a82ad;
+      font-size:.46rem;
+      line-height:1.28;
+      text-align:left;
+    }
+    .pill{
+      position:absolute;
+      right:1%;
+      bottom:7px;
+      border-radius:999px;
+      background:#e8eafb;
+      color:#555b8c;
+      padding:4px 9px;
+      font-size:.58rem;
+      letter-spacing:.01em;
+      white-space:nowrap;
+    }
+    .bottom-phrase{
+      position:absolute;
+      left:3%;
+      bottom:18px;
+      width:48%;
+      text-align:center;
+      font-size:1rem;
+      line-height:1.2;
+      transform:rotate(-4deg);
+      transform-origin:center;
+    }
+
+    /* ---------- dialogs ---------- */
+    dialog{
+      border:0;
+      border-radius:22px;
+      padding:0;
+      max-width:520px;
+      width:calc(100% - 24px);
+      background:#fffafb;
+      color:var(--ink);
+      box-shadow:0 25px 80px rgba(0,0,0,.28);
+    }
+    dialog::backdrop{background:rgba(35,28,45,.46)}
+    .modal{padding:18px}
+    .modal h2{margin:0 0 14px;font-size:1.2rem}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .field{margin-bottom:10px}
+    .field label{
+      display:block;
+      font-size:.78rem;
+      color:var(--muted);
+      margin:0 0 5px;
+    }
+    input,select{
+      width:100%;
+      padding:11px 12px;
+      border:1px solid #d9dced;
+      border-radius:12px;
+      background:white;
+      color:var(--ink);
+      font-size:16px;
+      transition:background-color .16s ease,border-color .16s ease,color .16s ease,opacity .16s ease;
+    }
+    #txOut{
+      background:#FFF9FB;
+      border-color:var(--afterglow-3);
+    }
+    #txIn{
+      background:#F7FCFA;
+      border-color:var(--seaglass-1);
+    }
+    #txOut:disabled,#txIn:disabled{
+      background:var(--disabled-fill);
+      border-color:var(--disabled-line);
+      color:var(--disabled-ink);
+      opacity:.78;
+      cursor:not-allowed;
+      -webkit-text-fill-color:var(--disabled-ink);
+    }
+    .modal-actions{
+      display:flex;
+      gap:8px;
+      justify-content:flex-end;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+    .modal-actions button{
+      border:0;
+      border-radius:13px;
+      padding:10px 13px;
+      min-height:44px;
+      background:#625d92;
+      color:white;
+      font-weight:620;
+    }
+    .modal-actions button.secondary{
+      background:#f6f1f3;
+      color:var(--ink);
+      border:1px solid #ddd3da;
+    }
+    .modal-actions button.danger{background:#a95868}
+    .note{
+      font-size:.76rem;
+      color:var(--muted);
+      line-height:1.4;
+    }
+
+    .sr-only{
+      position:absolute!important;
+      width:1px!important;
+      height:1px!important;
+      padding:0!important;
+      margin:-1px!important;
+      overflow:hidden!important;
+      clip:rect(0,0,0,0)!important;
+      white-space:nowrap!important;
+      border:0!important;
+    }
+
+    @media(max-width:560px){
+      .wrap{
+        width:calc(100% - 12px);
+        margin:6px auto 14px;
+        padding:16px 12px 12px;
+        border-radius:28px;
+      }
+      .top{margin-bottom:8px;padding:1px 0 0}
+      .brand{min-height:124px}
+      .title-lockup{width:100%;height:120px}
+      .title-kicker{left:20%;top:4px;font-size:.66rem}
+      .title-prophetic{left:2%;top:24px;font-size:2.35rem}
+      .title-oracle{right:19%;top:67px;font-size:1.72rem}
+      .title-sub{left:12%;bottom:0;font-size:.77rem}
+      .crystal{width:66px;right:-1%;top:39px}
+      .brand-swash{left:1%;top:76px;width:49%}
+      .pill{font-size:.52rem;padding:3px 7px}
+.summary{gap:7px;margin-bottom:10px}
+      .summary-card{padding:10px 9px 9px;border-radius:18px}
+      .summary-label{font-size:.67rem;margin-bottom:4px}
+      .summary-value{font-size:1.42rem}
+      .summary-date,#projectionDate{font-size:.63rem}
+      .summary-card .icon-btn{
+        width:29px;height:29px;top:5px;right:4px;
+      }
+      .summary-card .icon-btn svg{width:19px;height:19px}
+      .add-btn{min-height:44px;margin-bottom:10px;border-radius:16px;font-size:.82rem}
+      .add-btn .plus{font-size:1.45rem}
+      .ledger-head{min-height:44px;padding:8px 10px}
+      .ledger-title{font-size:1.08rem}
+      .ledger-phrase{left:35%;top:-5px;width:60%;font-size:.86rem}
+      #ledger{padding:5px 7px 7px}
+      .tx-row{
+        grid-template-columns:56px minmax(0,1fr) 70px 27px;
+        gap:6px;
+        min-height:70px;
+        padding:5px 6px;
+        border-radius:14px;
+      }
+      .date-card{min-height:58px;border-radius:11px}
+      .date-card .mon{font-size:.54rem}
+      .date-card .day{font-size:1.2rem}
+      .date-card .dow{font-size:.55rem}
+      .date-card .year{font-size:.47rem}
+      .tx-name{font-size:.78rem}
+      .tx-note{font-size:.58rem}
+      .tx-money{min-width:68px}
+      .tx-amount{font-size:.75rem}
+      .tx-balance{font-size:.68rem}
+      .editbtn{width:27px;height:27px;padding:3px}
+      .editbtn svg{width:18px;height:18px}
+      .utilities{gap:5px;margin-top:9px}
+      .utility-btn,.utility-label{
+        min-height:41px;
+        padding:6px 4px;
+        font-size:.62rem;
+        gap:4px;
+        border-radius:13px;
+      }
+      .utility-btn svg,.utility-label svg{width:18px;height:18px}
+      .footer{min-height:88px;margin-top:2px;padding-left:6px}
+      .bank-note{font-size:.40rem;width:43%;right:0;top:33px}
+      .bottom-phrase{font-size:.86rem;width:48%;left:2%;right:auto;bottom:18px;transform:rotate(-4deg)}
+      .pill{right:0;bottom:5px}
+      .grid2{grid-template-columns:1fr}
+    }
+
+    @media(max-width:380px){
+      .title-lockup{height:116px}
+      .title-kicker{left:18%;top:4px;font-size:.61rem}
+      .title-prophetic{left:1%;top:24px;font-size:2.12rem}
+      .title-oracle{right:18%;top:64px;font-size:1.58rem}
+      .title-sub{left:8%;bottom:0;font-size:.69rem}
+      .crystal{width:61px;right:-2%;top:38px}
+      .brand-swash{top:73px;width:47%}
+      .ledger-phrase{left:33%;top:-5px;width:62%;font-size:.82rem}
+      .summary-value{font-size:1.3rem}
+      .tx-row{grid-template-columns:52px minmax(0,1fr) 64px 25px}
+      .tx-amount{font-size:.7rem}
+      .tx-balance{font-size:.64rem}
+      .utility-btn,.utility-label{font-size:.58rem}
+    }
+
+    /* v1.17: rendered title artwork */
+    .brand{min-height:0!important;}
+    .title-image-wrap{width:100%;display:flex;justify-content:center;align-items:center;margin:0 auto 8px;}
+    .title-image{display:block;width:100%;height:auto;object-fit:contain;}
+    @media(max-width:560px){.brand{min-height:0!important}.title-image-wrap{margin:0 auto 8px}.title-image{width:100%}}
+    @media(max-width:380px){.title-image-wrap{margin-bottom:7px}}
+
+    /* v1.20: footer phrase position/angle only */
+    .bank-note{
+      left:1%;
+      right:auto;
+      top:34px;
+      width:40%;
+      font-size:.40rem;
+    }
+    .pill{
+      left:1%;
+      right:auto;
+      bottom:7px;
+      padding:3px 7px;
+      font-size:.49rem;
+    }
+    .bottom-phrase{
+      left:auto;
+      right:1%;
+      bottom:18px;
+      width:52%;
+      font-size:1.14rem;
+      transform:rotate(2deg);
+    }
+    @media(max-width:560px){
+      .bank-note{left:0;right:auto;top:33px;width:40%;font-size:.36rem}
+      .pill{left:0;right:auto;bottom:5px;padding:3px 7px;font-size:.45rem}
+      .bottom-phrase{left:auto;right:5%;bottom:18px;width:53%;font-size:1rem;transform:rotate(2deg)}
+    }
+    @media(max-width:380px){
+      .bank-note{left:0;right:auto;top:33px;width:40%;font-size:.34rem}
+      .pill{left:0;right:auto;bottom:5px;padding:3px 6px;font-size:.43rem}
+      .bottom-phrase{left:auto;right:4%;bottom:17px;width:54%;font-size:.98rem;transform:rotate(2deg)}
+    }
+  
+    /* v1.20: give balance-card text a little more breathing room on the left */
+    .summary-card{padding-left:18px}
+    @media(max-width:520px){.summary-card{padding-left:14px}}
+
+  
+    /* ============================================================
+       ORACLE V2 / PASS 2 — Tiny Art Department
+       Art integration only. Functional Pass 1 logic remains intact.
+       ============================================================ */
+
+    /* Paper as surface, not generic app rectangle. */
+    body{
+      background:
+        radial-gradient(circle at 14% 0%, rgba(196,191,236,.34), transparent 30rem),
+        linear-gradient(180deg,#F2EFF8 0%,#F8F2F7 100%);
+    }
+    .wrap{
+      position:relative;
+      isolation:isolate;
+      background:var(--paper);
+    }
+    .wrap::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      pointer-events:none;
+      opacity:.34;
+      background-image:
+        radial-gradient(circle at 18% 24%, rgba(13,17,64,.035) 0 0.7px, transparent .9px),
+        radial-gradient(circle at 77% 64%, rgba(217,165,189,.06) 0 0.8px, transparent 1px),
+        linear-gradient(92deg, transparent 0 48%, rgba(13,17,64,.018) 49%, transparent 50%);
+      background-size:19px 23px, 27px 31px, 47px 47px;
+      mix-blend-mode:multiply;
+    }
+
+    /* Approved V2 masthead. */
+    .top{margin-bottom:8px}
+    .title-image-wrap{
+      width:min(100%,700px);
+      margin:0 auto 4px;
+    }
+    .title-image{
+      width:100%;
+      height:auto;
+      filter:drop-shadow(0 4px 8px rgba(13,17,64,.06));
+    }
+
+    /* Balance cards: art is decoration; controls remain real controls. */
+    .summary-card{
+      overflow:visible;
+      min-height:112px;
+      display:flex;
+      align-items:center;
+      padding:13px 50px 12px 15px;
+    }
+    .summary-copy{
+      position:relative;
+      z-index:2;
+      min-width:0;
+      width:100%;
+    }
+    .summary-art{
+      position:absolute;
+      z-index:1;
+      pointer-events:none;
+      user-select:none;
+      object-fit:contain;
+      opacity:.94;
+      filter:drop-shadow(0 4px 5px rgba(13,17,64,.08));
+    }
+    .coins-art{
+      width:92px;
+      right:-11px;
+      bottom:-14px;
+      transform:rotate(1deg);
+    }
+    .crystal-art{
+      width:91px;
+      right:-13px;
+      bottom:-13px;
+      transform:rotate(-1deg);
+    }
+    .summary-card .icon-btn{
+      z-index:4;
+      background:rgba(253,246,249,.64);
+      backdrop-filter:blur(2px);
+      -webkit-backdrop-filter:blur(2px);
+    }
+
+
+    /* Ledger shifts from glossy gradient toward printed-paper editorial. */
+    .ledger-card{
+      background:rgba(255,250,251,.76);
+      box-shadow:0 3px 0 rgba(13,17,64,.025);
+    }
+    .ledger-head{
+      background:
+        linear-gradient(90deg,rgba(196,191,236,.44),rgba(173,168,234,.29));
+    }
+    .ledger-title{
+      font-family:Georgia,"Times New Roman",serif;
+      font-weight:600;
+      letter-spacing:-.025em;
+    }
+    .tx-row{
+      background:rgba(255,249,251,.76);
+    }
+
+    /* Approved ripped-paper marginalia, replacing faux-script text. */
+    .footer{
+      min-height:106px;
+    }
+    .bottom-phrase{display:none!important}
+    .bottom-phrase-img{
+      position:absolute;
+      right:-1%;
+      bottom:10px;
+      width:55%;
+      height:auto;
+      object-fit:contain;
+      transform:rotate(1.3deg);
+      transform-origin:center;
+      pointer-events:none;
+      user-select:none;
+      filter:drop-shadow(0 2px 3px rgba(13,17,64,.05));
+    }
+
+    @media(max-width:560px){
+      .title-image-wrap{margin-bottom:3px}
+      .summary-card{
+        min-height:104px;
+        padding:11px 41px 10px 13px;
+      }
+      .coins-art{width:78px;right:-13px;bottom:-11px}
+      .crystal-art{width:76px;right:-14px;bottom:-9px}
+      .summary-card .icon-btn{
+        top:5px;
+        right:4px;
+      }
+      .footer{min-height:98px}
+      .bottom-phrase-img{
+        right:-2%;
+        bottom:8px;
+        width:58%;
+      }
+    }
+
+    @media(max-width:380px){
+      .summary-card{
+        min-height:100px;
+        padding-right:38px;
+      }
+      .coins-art{width:73px}
+      .crystal-art{width:71px;right:-12px;bottom:-7px}
+      .bottom-phrase-img{width:59%;right:-2%}
+    }
+
+  
+    /* Pass 2b: torn-paper marginalia is attached to Transactions,
+       intentionally ignoring the panel boundary like a stuck-on note. */
+    .ledger-card{
+      position:relative;
+      overflow:visible;
+    }
+    .transactions-note{
+      position:absolute;
+      z-index:8;
+      top:-27px;
+      right:-18px;
+      width:210px;
+      height:auto;
+      object-fit:contain;
+      transform:rotate(2.2deg);
+      transform-origin:center;
+      pointer-events:none;
+      user-select:none;
+      filter:drop-shadow(0 3px 4px rgba(13,17,64,.08));
+    }
+    @media(max-width:560px){
+      .transactions-note{
+        top:-23px;
+        right:-15px;
+        width:176px;
+      }
+    }
+    @media(max-width:380px){
+      .transactions-note{
+        top:-20px;
+        right:-12px;
+        width:158px;
+      }
+    }
+
+  
+    /* Pass 2c polish */
+    .transactions-note{
+      top:-8px;
+      right:22px;
+      width:228px;
+    }
+    .wayward-action-icon{
+      display:block;
+      width:30px;
+      height:30px;
+      object-fit:contain;
+      pointer-events:none;
+      user-select:none;
+    }
+    .calendar-action-icon{
+      width:34px;
+      height:34px;
+    }
+    .editbtn .wayward-action-icon{
+      width:28px;
+      height:28px;
+    }
+
+    /* One consistent quiet border for every transaction row. */
+    .tx-row,
+    .tx-row.today{
+      border:1px solid rgba(217,165,189,.48) !important;
+      box-shadow:none !important;
+      outline:none !important;
+    }
+
+    @media(max-width:560px){
+      .transactions-note{
+        top:-5px;
+        right:24px;
+        width:202px;
+      }
+      .wayward-action-icon{
+        width:29px;
+        height:29px;
+      }
+      .calendar-action-icon{
+        width:33px;
+        height:33px;
+      }
+      .editbtn .wayward-action-icon{
+        width:27px;
+        height:27px;
+      }
+    }
+    @media(max-width:380px){
+      .transactions-note{
+        top:-3px;
+        right:18px;
+        width:182px;
+      }
+    }
+
+  
+    /* Pass 2d micro-positioning */
+    .icon-btn .wayward-action-icon{
+      position:relative;
+      left:-3px;
+      top:-4px;
+      margin:auto;
+    }
+    .icon-btn .calendar-action-icon{
+      left:-3px;
+      top:-4px;
+    }
+    .editbtn .wayward-action-icon{
+      position:relative;
+      top:-6px;
+    }
+
+    /* Les Mis marginalia is intentionally out of circulation for now. */
+    .transactions-note{display:none!important;}
+
+  
+    /* Pass 2e: final top-card icon nudges */
+    #openingCardBtn .wayward-action-icon{
+      left:-6px;
+      top:-4px;
+    }
+    #projectionCalendarBtn .calendar-action-icon{
+      left:-6px;
+      top:-7px;
+    }
+
+  
+    /* v2.5 footer identity badge */
+    .pill{display:none!important;}
+    .version-badge{
+      position:absolute;
+      left:1%;
+      bottom:4px;
+      width:128px;
+      max-width:36%;
+      height:auto;
+      object-fit:contain;
+      pointer-events:none;
+      user-select:none;
+      filter:drop-shadow(0 2px 3px rgba(13,17,64,.06));
+    }
+    @media(max-width:560px){
+      .version-badge{width:116px;max-width:38%;bottom:4px;}
+    }
+
+  
+    /* v2.5 footer spacing tune: disclaimer lives on the right,
+       centered within its own half so it clears the version badge. */
+    .bank-note{
+      left:auto;
+      right:2%;
+      top:28px;
+      width:48%;
+      max-width:320px;
+      text-align:center;
+    }
+    @media(max-width:560px){
+      .bank-note{
+        left:auto;
+        right:1%;
+        top:27px;
+        width:49%;
+        text-align:center;
+        font-size:.36rem;
+      }
+    }
+    @media(max-width:380px){
+      .bank-note{
+        left:auto;
+        right:1%;
+        top:26px;
+        width:49%;
+        text-align:center;
+        font-size:.34rem;
+      }
+    }
+
+  /* A tiny calendar opposite the original Transactions heading. */
+.ledger-calendar-wrap{position:relative;margin-left:auto;flex:none;width:38px;height:38px}
+.ledger-calendar-btn{width:38px;height:38px;display:grid;place-items:center;border:0;border-radius:12px;background:rgba(255,250,251,.66);cursor:pointer;padding:4px}
+.ledger-calendar-btn img{display:block;width:29px;height:29px;object-fit:contain}
+.ledger-calendar-btn:focus-visible{outline:2px solid #7b5a9a;outline-offset:2px}
+.ledger-from-date{position:absolute;right:0;top:0;width:38px;height:38px;opacity:0;pointer-events:none}
+/* v3.7: original utility colours and spacing, outside the ledger card. */
+.utilities{margin:13px 2px 14px;gap:7px;}
+.utility-btn,.utility-label{min-height:44px;padding:7px 8px;border-radius:15px;gap:8px;line-height:normal;}
+.utility-btn svg,.utility-label svg{width:20px;height:20px;flex-shrink:0;}
+.utility-btn.starting{background:var(--teal-fill);border-color:var(--teal-line);}
+.utility-btn.export{background:#fcedf2;border-color:#efcad8;}
+.utility-label.import{background:var(--purple-fill);border-color:#b8c1f0;}
+@media(max-width:600px){.utility-btn,.utility-label{min-height:44px;padding:7px 5px;font-size:.68rem;gap:5px;}}
+/* v3.8: Savings mirrors the two original balance cards, preserving their layout. */
+.savings-card .summary-art{opacity:.45;width:66px;height:66px;object-fit:contain}
+.ledger-filters{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 12px}
+.ledger-filter{font:inherit;font-size:.75rem;color:var(--ink);border:1px solid #b8c1f0;background:#fdf6f9;border-radius:12px;padding:7px 12px;cursor:pointer}
+.ledger-filter.active{background:var(--purple-fill);border-color:#9aa0e9;font-weight:700}
+.tx-row.negative-balance,.tx-row.negative-balance.today{background:#fcedf2!important}
+.balance-hazard{color:#c54d65;font-size:1.05em;margin-right:5px;vertical-align:baseline}
+.tx-balance{color:var(--ink)!important}
+.savings-tag{font-weight:700;color:#7b5a9a}
+@media(max-width:390px){.ledger-filter{padding:7px 9px;font-size:.69rem}}
+
+/* v3.9 — refined compact cards, account colours and ledger spacing */
+.summary{gap:9px;row-gap:10px}
+.summary-card{min-height:105px;padding:12px 37px 11px 12px;border-radius:19px}
+.summary-card.current:not(.savings-card),.summary-card.projected:not(.savings-card){background:var(--purple-fill);border-color:var(--purple-line)}
+.summary-card.savings-card{background:var(--teal-fill);border-color:var(--teal-line)}
+.summary-label{font-size:.72rem;line-height:1.18;margin-bottom:5px}
+.summary-value{font-size:clamp(1.2rem,5.2vw,1.9rem)}
+.summary-date{font-size:.7rem}
+.summary-card .summary-art{width:70px;height:auto;max-height:78px;opacity:.94;right:-8px;bottom:-10px}
+.summary-card.savings-card .summary-art{width:70px;height:auto;max-height:78px;opacity:.94;object-fit:contain}
+.summary-card .icon-btn{background:transparent!important;backdrop-filter:none;-webkit-backdrop-filter:none;top:6px;right:6px;width:35px;height:35px}
+.summary-card .icon-btn:active{background:rgba(13,17,64,.06)!important}
+.ledger-head{min-height:42px;padding:5px 12px;border-radius:18px 18px 0 0}
+.ledger-filters{margin:11px 12px 14px;gap:8px}
+.ledger-filter{padding:7px 11px}
+.ledger-calendar-btn{background:transparent}
+@media(max-width:390px){.summary{gap:8px}.summary-card{padding-left:10px;padding-right:34px}.summary-label{font-size:.68rem}.summary-value{font-size:clamp(1.13rem,5vw,1.7rem)}.summary-date{font-size:.66rem}.ledger-filters{margin-left:11px;margin-right:11px;gap:6px}}
+
+/* v4.0: compact account cards, vertical account labels and paired utility buttons */
+.summary-card{min-height:92px;padding:9px 31px 9px 24px;overflow:hidden;align-items:center}
+.summary-card .account-rail{position:absolute;z-index:3;left:5px;top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;text-orientation:mixed;font-size:.55rem;font-weight:700;letter-spacing:.045em;color:#4d5688;line-height:1;pointer-events:none}
+.summary-card .summary-label{font-size:.68rem;line-height:1.12;margin-bottom:4px;white-space:nowrap}
+.summary-card .summary-value{font-size:clamp(1.12rem,4.8vw,1.75rem)}
+.summary-card .summary-date{font-size:.62rem;line-height:1.15;margin-top:4px;white-space:nowrap}
+.summary-card .summary-art,.summary-card.savings-card .summary-art{width:53px;max-height:60px;right:-5px;bottom:-6px;opacity:.94}
+.summary-card .icon-btn{top:3px;right:4px;width:30px;height:30px;padding:3px}
+.summary-card .icon-btn .wayward-action-icon{max-width:27px;max-height:27px}
+.utilities{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:10px 2px 12px}
+.utility-btn.export,.utility-label.import{background:var(--purple-fill);border-color:var(--purple-line);min-height:36px;padding:5px 8px;border-radius:13px;font-size:.72rem;justify-content:center}
+.utility-btn.export svg,.utility-label.import svg{width:18px;height:18px}
+@media(max-width:390px){.summary-card{padding-left:22px;padding-right:29px}.summary-card .summary-label{font-size:.63rem}.summary-card .summary-date{font-size:.57rem}.summary-card .summary-art,.summary-card.savings-card .summary-art{width:48px}.summary-card .account-rail{left:4px;font-size:.51rem}}
+
+/* v4.1 — decorated external account rails and four individual illustrations */
+.summary-shell{display:grid;grid-template-columns:27px minmax(0,1fr);gap:3px;align-items:stretch;margin-bottom:10px}
+.summary-shell .summary{margin-bottom:0;min-width:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;row-gap:10px}
+.account-title-column{display:grid;grid-template-rows:1fr 1fr;gap:10px;min-height:0}
+.account-title-column img{width:100%;height:100%;max-height:98px;object-fit:contain;display:block;justify-self:center;align-self:center}
+.summary-card{min-width:0;min-height:96px;padding:9px 32px 9px 10px;overflow:hidden}
+.summary-card .summary-copy{position:relative;z-index:2;min-width:0}
+.summary-card .summary-label{font-size:clamp(.58rem,2.55vw,.69rem)}
+.summary-card .summary-value{font-size:clamp(1.08rem,4.65vw,1.72rem);letter-spacing:-.035em;white-space:nowrap}
+.summary-card .summary-date{font-size:clamp(.53rem,2.25vw,.64rem)}
+.summary-card .summary-art,.summary-card.savings-card .summary-art{width:56px;height:56px;max-height:56px;object-fit:contain;right:0;bottom:1px;opacity:.94}
+.summary-card .icon-btn{z-index:4}
+.ledger-head{position:relative;display:flex;align-items:center;justify-content:center;min-height:50px;padding:5px 10px}
+.ledger-title{display:flex;justify-content:center;align-items:center;flex:1;min-width:0;margin:0;text-align:center}
+.ledger-title img{display:block;width:min(68%,240px);height:39px;object-fit:contain;margin:auto}
+.ledger-calendar-wrap{position:absolute;right:9px;top:50%;transform:translateY(-50%);z-index:3}
+.ledger-filters{justify-content:center;margin:8px 8px 10px;gap:6px}
+@media(max-width:390px){.summary-shell{grid-template-columns:23px minmax(0,1fr);gap:2px}.summary-card{padding-left:8px;padding-right:28px}.summary-card .summary-art,.summary-card.savings-card .summary-art{width:49px;height:49px}.summary-card .summary-value{font-size:clamp(1rem,4.55vw,1.45rem)}.ledger-title img{width:67%;height:36px}}
+
+/* v4.2 — polished artwork, with the balance card geometry unchanged */
+.summary-card{overflow:visible}
+.summary-card .summary-art,.summary-card.savings-card .summary-art{width:66px;height:75px;max-height:none;right:-7px;bottom:-14px;opacity:1;object-fit:contain;pointer-events:none;z-index:3}
+.summary-card.savings-card.projected .summary-art{width:79px;height:85px;right:-11px;bottom:-17px}
+.summary-shell{grid-template-columns:33px minmax(0,1fr);gap:3px}
+.account-title-column img{max-height:112px;transform:scale(1.12)}
+.ledger-title img{width:min(84%,300px);height:47px}
+.ledger-head{min-height:55px}
+.mirrored-projection-calendar{transform:scaleX(-1)}
+@media(max-width:390px){.summary-shell{grid-template-columns:28px minmax(0,1fr)}.summary-card .summary-art,.summary-card.savings-card .summary-art{width:58px;height:68px}.summary-card.savings-card.projected .summary-art{width:70px;height:78px}.ledger-title img{width:79%;height:44px}}
+
+/* v4.3: denser, consistently spaced vertical composition; maintain touch targets */
+.summary-shell{margin-bottom:7px;grid-template-columns:34px minmax(0,1fr)}
+.summary-shell .summary{column-gap:9px;row-gap:7px}
+.account-title-column{gap:7px}
+.account-title-column img{max-height:120px;transform:scale(1.14)}
+.utilities{margin:7px 2px 8px;gap:9px}
+.ledger-head{min-height:51px;padding-top:3px;padding-bottom:3px}
+.ledger-filters{margin:5px 8px 8px;gap:6px}
+@media(max-width:390px){.summary-shell{grid-template-columns:29px minmax(0,1fr)}.account-title-column img{transform:scale(1.1)}}
+
+/* v4.4: tailored proportions, consistent rhythm and restrained decorations */
+.summary-shell{grid-template-columns:31px minmax(0,1fr);gap:4px;margin-bottom:8px}
+.summary-shell .summary{column-gap:9px;row-gap:12px}
+.account-title-column{gap:12px}
+.account-title-column img{width:100%;height:100%;max-height:86px;transform:none;object-fit:contain}
+.summary-card{min-height:89px;padding:9px 31px 9px 10px;overflow:visible;align-items:center}
+.summary-card .summary-art,.summary-card.savings-card .summary-art{width:49px;height:54px;max-height:54px;right:-5px;bottom:-6px;object-fit:contain;opacity:1;z-index:3}
+.summary-card.savings-card.projected .summary-art{width:56px;height:61px;max-height:61px;right:-6px;bottom:-7px}
+.summary-card .summary-copy{z-index:2}
+.summary-card .icon-btn{width:34px;height:34px;top:3px;right:4px}
+.summary-card .icon-btn .wayward-action-icon{max-width:27px;max-height:27px}
+.add-btn{margin-bottom:5px}
+.utilities{margin:5px 2px 6px;gap:9px}
+.ledger-head{min-height:56px;padding:3px 10px}
+.ledger-title img{width:min(91%,340px);height:52px;max-width:calc(100% - 32px)}
+.ledger-filters{margin:5px 8px 8px;gap:6px}
+@media(max-width:390px){
+.summary-shell{grid-template-columns:27px minmax(0,1fr)}
+.summary-card{min-height:87px;padding-left:8px;padding-right:27px}
+.summary-card .summary-art,.summary-card.savings-card .summary-art{width:45px;height:50px;max-height:50px}
+.summary-card.savings-card.projected .summary-art{width:52px;height:57px;max-height:57px}
+.account-title-column img{max-height:84px}
+.ledger-title img{width:85%;height:49px}
+}
+
+/* v4.5: approved titles, larger ledger title, only savings projected orb smaller */
+.ledger-title img{width:min(98%,390px);height:64px;max-width:calc(100% - 12px)}
+.ledger-head{min-height:67px}
+.summary-card.savings-card.projected .summary-art{width:43px;height:47px;max-height:47px;right:-5px;bottom:-6px}
+@media(max-width:390px){.ledger-title img{width:96%;height:58px}.summary-card.savings-card.projected .summary-art{width:39px;height:43px;max-height:43px}}
+
+/* v4.6: approved Amethyst/Peacock wordmarks and tighter balance cards */
+.summary-card{min-height:75px;padding-top:6px;padding-bottom:6px}
+.summary-shell .summary{row-gap:10px}
+.account-title-column{gap:10px}
+.account-title-column img{width:100%;height:100%;max-height:74px;object-fit:contain}
+.summary-card.savings-card.projected .summary-art{width:61px;height:66px;max-height:66px;right:-6px;bottom:-8px}
+@media(max-width:390px){.summary-card{min-height:75px;padding-top:6px;padding-bottom:6px}.account-title-column img{max-height:74px}.summary-card.savings-card.projected .summary-art{width:57px;height:62px;max-height:62px}}
+
+/* v4.7: matching crystal-ball dimensions, with all other card artwork unchanged */
+.summary-card.savings-card.projected .summary-art{
+  width:49px;height:54px;max-height:54px;right:-5px;bottom:-6px;
+}
+@media(max-width:390px){
+  .summary-card.savings-card.projected .summary-art{
+    width:45px;height:50px;max-height:50px;right:-5px;bottom:-6px;
+  }
+}
+
+/* v5.0 — precision positioning only; preserve all card artwork and logic */
+/* Move pencils and calendars toward the right edge without resizing them. */
+.summary-card .icon-btn{right:-2px}
+/* Raise only the savings projection calendar to match the chequing calendar. */
+.summary-card.savings-card.projected .icon-btn{top:-2px}
+/* Anchor the art just below the lower card border; retain current dimensions. */
+.summary-card .summary-art,
+.summary-card.savings-card .summary-art{bottom:-11px}
+/* The savings coin illustration is approximately 10% larger, anchored to the same baseline. */
+.summary-card.savings-card.current .summary-art.coins-art{width:54px;height:59px;max-height:59px;bottom:-11px}
+@media(max-width:390px){
+  .summary-card.savings-card.current .summary-art.coins-art{width:50px;height:55px;max-height:55px}
+}
+
+/* v5.1 — savings artwork alignment */
+.summary-card.savings-card.current .summary-art.coins-art{bottom:-15px}
+.summary-card.savings-card.projected .summary-art.crystal-art{bottom:-12px}
+.summary-card.savings-card.projected .icon-btn{top:3px}
+.scope-panel{margin:12px 0;padding:12px;border:1px solid #b7a9df;border-radius:14px;background:#f5f0ff}
+.scope-panel legend{font-weight:700;margin-bottom:8px}
+.scope-panel label{display:flex;gap:9px;align-items:flex-start;padding:7px 0;font-size:.92rem}
+.scope-panel input{margin-top:3px;flex-shrink:0}
+.scope-warning{font-size:.81rem;color:#69446c;margin-top:5px}
+
+/* v5.2 — compact, correctly aligned recurrence options */
+#txScopePanel{
+  display:block;
+  box-sizing:border-box;
+  min-width:0;
+  width:100%;
+  margin:14px 0 10px;
+  padding:10px 13px 12px;
+  border:1px solid #b7a9df;
+  border-radius:14px;
+  background:#f5f0ff;
+}
+#txScopePanel[style*="display:none"]{display:none!important}
+#txScopePanel legend{padding:0 5px;font-size:.94rem;font-weight:700}
+#txScopePanel label{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:10px;
+  width:100%;
+  box-sizing:border-box;
+  margin:0;
+  padding:7px 2px;
+  font-size:.9rem;
+  line-height:1.35;
+  color:var(--ink);
+  cursor:pointer;
+}
+#txScopePanel input[type="radio"]{
+  appearance:auto;
+  -webkit-appearance:radio;
+  display:block;
+  flex:0 0 18px;
+  width:18px!important;
+  height:18px!important;
+  min-width:18px;
+  min-height:18px;
+  padding:0!important;
+  margin:0!important;
+  border:0;
+  accent-color:#625d92;
+}
+#txScopePanel label span{display:block;min-width:0;flex:1;overflow-wrap:break-word}
+#txScopePanel .scope-warning{
+  margin:8px 0 0;
+  padding-top:9px;
+  border-top:1px solid #d7cbed;
+  font-size:.76rem;
+  line-height:1.4;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <div class="title-image-wrap">
+        <img class="title-image" src="./oracle-v2-masthead.png" alt="The Amazing Prophetic Oracle of Fiduciary Fiscal Fuckery">
+      </div>
+    </div>
+  </header>
+
+  <section class="summary-shell" aria-label="Balance summary"><div class="account-title-column" aria-hidden="true"><img src="./chequing-vertical.png" alt=""><img src="./savings-vertical.png" alt=""></div><div class="summary">
+    <div class="summary-card current chequing-card">
+      <img class="summary-art coins-art" src="./chequing-coins-v49.png" alt="" aria-hidden="true">
+      <div class="summary-copy">
+        <div class="summary-label">Current balance</div>
+        <div class="summary-value" id="currentSummary">$0.00</div>
+        <div class="summary-date" id="currentDateLabel">as of today</div>
+      </div>
+      <button class="icon-btn" id="openingCardBtn" aria-label="Set starting balance" title="Set starting balance">
+        <img class="wayward-action-icon" src="./oracle-pencil.png" alt="" aria-hidden="true">
+      </button>
+    </div>
+
+    <div class="summary-card projected chequing-card">
+      <img class="summary-art crystal-art" src="./chequing-crystal-ball-v49.png" alt="" aria-hidden="true">
+      <div class="summary-copy">
+        <div class="summary-label">Projected balance</div>
+        <div class="summary-value" id="projectedSummary">$0.00</div>
+        <div class="summary-date" id="projectionDateLabel">as of Sep 9, 2026</div>
+      </div>
+      <input id="projectionDate" type="date" aria-label="Projected balance date" class="projection-date-hidden">
+      <button class="icon-btn" id="projectionCalendarBtn" aria-label="Choose projection date" title="Choose projection date">
+        <img class="wayward-action-icon calendar-action-icon mirrored-projection-calendar" src="./oracle-calendar.png" alt="" aria-hidden="true">
+      </button>
+    </div>
+    <div class="summary-card current savings-card">
+      <img class="summary-art coins-art" src="./savings-coins-v49.png" alt="" aria-hidden="true">
+      <div class="summary-copy"><div class="summary-label">Current balance</div><div class="summary-value" id="savingsCurrentSummary">$0.00</div><div class="summary-date" id="savingsCurrentDateLabel">as of today</div></div>
+      <button class="icon-btn" id="savingsOpeningCardBtn" aria-label="Set savings starting balance" title="Set savings starting balance"><img class="wayward-action-icon" src="./oracle-pencil-teal.png" alt="" aria-hidden="true"></button>
+    </div>
+    <div class="summary-card projected savings-card">
+      <img class="summary-art crystal-art" src="./savings-crystal-ball-v49.png" alt="" aria-hidden="true">
+      <div class="summary-copy"><div class="summary-label">Projected balance</div><div class="summary-value" id="savingsProjectedSummary">$0.00</div><div class="summary-date" id="savingsProjectionDateLabel">as of today</div></div>
+      <input id="savingsProjectionDate" type="date" aria-label="Savings projected balance date" class="projection-date-hidden">
+      <button class="icon-btn" id="savingsProjectionCalendarBtn" aria-label="Choose savings projection date" title="Choose savings projection date"><img class="wayward-action-icon calendar-action-icon mirrored-projection-calendar" src="./oracle-calendar.png" alt="" aria-hidden="true"></button>
+    </div>
+  </div></section>
+
+  <button class="add-btn" id="addBtn"><span class="plus">＋</span><span>Add Transaction</span></button>
+
+  <div class="utilities">
+    <button class="utility-btn export" id="exportBtn">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 15v5h14v-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Export</span>
+    </button>
+    <label class="utility-label import" for="importFile">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17V5m0 0 4 4m-4-4-4 4M5 9v11h14V9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Import</span>
+    </label>
+    <input id="importFile" type="file" accept="application/json" hidden>
+  </div>
+
+  <section class="ledger-card" aria-label="Transactions">
+<div class="ledger-head">
+      <h2 class="ledger-title"><img src="./transactions-horizontal.png" alt="Transactions"></h2>
+      <div class="ledger-calendar-wrap">
+        <button type="button" id="ledgerCalendarBtn" class="ledger-calendar-btn" aria-label="Choose first transaction date" title="Show transactions from date">
+          <img src="./oracle-calendar-mirrored.png" alt="" aria-hidden="true">
+        </button>
+        <input id="ledgerFromDate" class="ledger-from-date" type="date" aria-label="Show transactions from date">
+      </div>
+    </div>
+
+
+    <div class="ledger-filters" role="group" aria-label="Filter transactions">
+      <button type="button" class="ledger-filter active" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="ledger-filter" data-filter="credit" aria-pressed="false">Credit</button>
+      <button type="button" class="ledger-filter" data-filter="debit" aria-pressed="false">Debit</button>
+      <button type="button" class="ledger-filter" data-filter="savings" aria-pressed="false">Savings</button>
+    </div>
+    <div id="ledger" aria-live="polite"></div>
+  </section>
+
+
+  <footer class="footer">
+<div class="bank-note">Weekend/Canada closures: income moves to previous banking day.<br>Debits move to following banking day.</div>
+    
+    <img class="version-badge" src="./oracle-v25-version-badge.png" alt="v2.5 · local only">
+  </footer>
+</div>
+
+<dialog id="txDialog"><form method="dialog" class="modal" id="txForm">
+  <h2 id="txTitle">Add transaction</h2><input type="hidden" id="txId">
+  <div class="field"><label for="txName">Item</label><input id="txName" required placeholder="e.g. Phone bill, Groceries, Starbucks"></div>
+  <div class="field"><label for="txDate">Nominal date</label><input id="txDate" type="date" required></div>
+  <div class="grid2">
+    <div class="field"><label for="txOut">Money out</label><input id="txOut" type="number" min="0" step="0.01" inputmode="decimal"></div>
+    <div class="field"><label for="txIn">Money in</label><input id="txIn" type="number" min="0" step="0.01" inputmode="decimal"></div>
+  </div>
+  <div class="grid2 savings-entry">
+    <div class="field"><label for="txSavingsIn">Savings in</label><input id="txSavingsIn" type="number" min="0" step="0.01" inputmode="decimal"></div>
+    <div class="field"><label for="txSavingsOut">Savings out</label><input id="txSavingsOut" type="number" min="0" step="0.01" inputmode="decimal"></div>
+  </div>
+  <div class="field"><label for="txRepeat">Repeat</label><select id="txRepeat">
+    <option value="none">Does not repeat</option>
+    <option value="weekly">Weekly</option>
+    <option value="biweekly">Every 2 weeks</option>
+    <option value="triweekly">Every 3 weeks</option>
+    <option value="sixweekly">Every 6 weeks</option>
+    <option value="monthly">Monthly on this day</option>
+    <option value="lastday">Monthly — last day of month</option>
+    <option value="bimonthly">Every 2 months</option>
+    <option value="quarterly">Quarterly (every 3 months)</option>
+    <option value="annually">Annually</option>
+  </select></div>
+  <div class="field" id="repeatUntilWrap" style="display:none"><label for="txUntil">Generate through</label><input id="txUntil" type="date"></div>
+  <fieldset class="scope-panel" id="txScopePanel" style="display:none">
+    <legend>Apply this change to</legend>
+    <label><input type="radio" name="txScope" value="one" checked><span>This occurrence only</span></label>
+    <label><input type="radio" name="txScope" value="future"><span>This and future occurrences</span></label>
+    <label><input type="radio" name="txScope" value="all"><span>All occurrences, including past</span></label>
+    <div class="scope-warning" id="scopeWarning">Past transactions are protected unless you deliberately select all occurrences. For one occurrence, repeat frequency and end date stay unchanged.</div>
+  </fieldset>
+  <div class="note">Banking-day adjustment is automatic: income moves backward; debits move forward.</div>
+  <div class="modal-actions">
+    <button type="button" class="danger" id="deleteBtn" style="display:none">Delete</button>
+    <button type="button" class="secondary" id="cancelTx">Cancel</button>
+    <button type="submit">Save</button>
+  </div>
+</form></dialog>
+
+<dialog id="savingsOpeningDialog"><form method="dialog" class="modal" id="savingsOpeningForm">
+  <h2>Savings starting balance</h2>
+  <div class="field"><label for="savingsOpeningDate">As of date</label><input id="savingsOpeningDate" type="date" required></div>
+  <div class="field"><label for="savingsOpeningBalance">Savings balance</label><input id="savingsOpeningBalance" type="number" step="0.01" inputmode="decimal" required></div>
+  <div class="note">Savings transfers before this date are excluded from the savings balance, but still affect chequing.</div>
+  <div class="modal-actions"><button type="button" class="secondary" id="cancelSavingsOpening">Cancel</button><button type="submit">Save</button></div>
+</form></dialog>
+
+<dialog id="openingDialog"><form method="dialog" class="modal" id="openingForm">
+  <h2>Starting balance</h2>
+  <div class="field"><label for="openingDate">As of date</label><input id="openingDate" type="date" required></div>
+  <div class="field"><label for="openingBalance">Chequing balance</label><input id="openingBalance" type="number" step="0.01" inputmode="decimal" required></div>
+  <div class="note">This is your baseline balance. Transactions before this date are ignored in the running balance.</div>
+  <div class="modal-actions"><button type="button" class="secondary" id="cancelOpening">Cancel</button><button type="submit">Save</button></div>
+</form></dialog>
+
+<script>
+(()=>{
+const KEY="chequebook-prophecy-v1"; // DO NOT CHANGE: keeps existing data across the redesign.
+const PROJECTION_KEY="chequebook-prophecy-projection-date";
+const SAVINGS_PROJECTION_KEY="chequebook-prophecy-savings-projection-date";
+const bankingClosures=new Set([
+  // Payments Canada published 2026 system closures.
+  "2026-01-01","2026-04-03","2026-05-18","2026-07-01","2026-09-07","2026-09-30","2026-10-12","2026-11-11","2026-12-25","2026-12-28",
+  // Expected 2027 federal banking closures; Payments Canada had not yet published its 2027 schedule as of Sep 10, 2026.
+  "2027-01-01","2027-03-26","2027-05-24","2027-07-01","2027-09-06","2027-09-30","2027-10-11","2027-11-11","2027-12-27","2027-12-28"
+]);
+
+const todayISO=()=>{
+  const d=new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+};
+
+let state=load();
+
+function load(){
+  try{
+    const x=JSON.parse(localStorage.getItem(KEY));
+    if(x&&Array.isArray(x.transactions))return x;
+  }catch(e){}
+  return{openingBalance:0,openingDate:todayISO(),savingsOpeningBalance:0,savingsOpeningDate:todayISO(),transactions:[]};
+}
+
+function save(){
+  localStorage.setItem(KEY,JSON.stringify(state));
+  render();
+}
+
+function parseISO(s){
+  const[y,m,d]=s.split("-").map(Number);
+  return new Date(Date.UTC(y,m-1,d));
+}
+function fmtISO(d){
+  return `${d.getUTCFullYear()}-${String(d.getUTCMonth()+1).padStart(2,"0")}-${String(d.getUTCDate()).padStart(2,"0")}`;
+}
+function addDays(s,n){
+  const d=parseISO(s);d.setUTCDate(d.getUTCDate()+n);return fmtISO(d);
+}
+function daysInMonth(y,m){return new Date(Date.UTC(y,m,0)).getUTCDate()}
+function isBusinessDay(s){
+  const d=parseISO(s),dow=d.getUTCDay();
+  return dow!==0&&dow!==6&&!bankingClosures.has(s);
+}
+function adjustedDate(tx){
+  const out=(Number(tx.out)||0)+(Number(tx.savingsIn)||0),inc=(Number(tx.in)||0)+(Number(tx.savingsOut)||0);
+  if((out>0&&inc>0)||(out===0&&inc===0))return tx.date;
+  let d=tx.date,g=0;
+  if(inc>0){
+    while(!isBusinessDay(d)&&g++<10)d=addDays(d,-1);
+  }else{
+    while(!isBusinessDay(d)&&g++<10)d=addDays(d,1);
+  }
+  return d;
+}
+function nextCalendarInterval(anchor,months,originalDay){
+  const d=parseISO(anchor);
+  const absoluteMonth=d.getUTCFullYear()*12+d.getUTCMonth()+months;
+  const y=Math.floor(absoluteMonth/12),m=absoluteMonth%12+1;
+  const day=Math.min(originalDay,daysInMonth(y,m));
+  return `${y}-${String(m).padStart(2,"0")}-${String(day).padStart(2,"0")}`;
+}
+function nextMonthlySameDay(s,originalDay){return nextCalendarInterval(s,1,originalDay)}
+function nextLastDay(s){
+  const d=parseISO(s);
+  let y=d.getUTCFullYear(),m=d.getUTCMonth()+2;
+  if(m===13){m=1;y++}
+  const day=daysInMonth(y,m);
+  return `${y}-${String(m).padStart(2,"0")}-${String(day).padStart(2,"0")}`;
+}
+function scheduledDates(tx){
+  const repeat=tx.repeat||"none";
+  if(repeat==="none")return [tx.date];
+  const until=tx.until||addDays(tx.date,365);
+  let cur=tx.date,count=0;
+  const originalDay=parseISO(tx.date).getUTCDate();
+  const dates=[];
+  while(cur<=until&&count++<400){
+    dates.push(cur);
+    if(repeat==="weekly")cur=addDays(cur,7);
+    else if(repeat==="biweekly")cur=addDays(cur,14);
+    else if(repeat==="triweekly")cur=addDays(cur,21);
+    else if(repeat==="sixweekly")cur=addDays(cur,42);
+    else if(repeat==="monthly")cur=nextCalendarInterval(tx.date,count,originalDay);
+    else if(repeat==="bimonthly")cur=nextCalendarInterval(tx.date,count*2,originalDay);
+    else if(repeat==="quarterly")cur=nextCalendarInterval(tx.date,count*3,originalDay);
+    else if(repeat==="annually")cur=nextCalendarInterval(tx.date,count*12,originalDay);
+    else if(repeat==="lastday")cur=nextLastDay(cur);
+    else break;
+  }
+  return dates;
+}
+function expandTransactions(){
+  const rows=[];
+  state.transactions.forEach(tx=>{
+    const overrides=tx.overrides||{};
+    for(const cur of scheduledDates(tx)){
+      const override=overrides[cur];
+      if(override&&override.deleted)continue;
+      const r={...tx,...(override||{}),id:`${tx.id}__${cur}`,
+        instanceDate:cur,date:override?.date||cur,parentId:tx.id,
+        generated:(tx.repeat||"none")!=="none"};
+      rows.push(r);
+    }
+  });
+  return rows
+    .map((r,sourceOrder)=>({...r,effectiveDate:adjustedDate(r),sourceOrder}))
+    .sort((a,b)=>{
+      const dateOrder=a.effectiveDate.localeCompare(b.effectiveDate);
+      if(dateOrder)return dateOrder;
+      const directionRank=tx=>{
+        const inc=(Number(tx.in)||0)+(Number(tx.savingsOut)||0),out=(Number(tx.out)||0)+(Number(tx.savingsIn)||0);
+        if(inc>0&&out<=0)return 0;
+        if(out>0&&inc<=0)return 1;
+        return 2;
+      };
+      return directionRank(a)-directionRank(b)||a.sourceOrder-b.sourceOrder;
+    });
+}
+
+function money(n){
+  return new Intl.NumberFormat("en-CA",{style:"currency",currency:"CAD"}).format(Number(n)||0);
+}
+function prettyDate(s){
+  return new Intl.DateTimeFormat("en-CA",{month:"short",day:"numeric",year:"numeric",timeZone:"UTC"}).format(parseISO(s));
+}
+function dateParts(s){
+  const d=parseISO(s);
+  return {
+    mon:new Intl.DateTimeFormat("en-CA",{month:"short",timeZone:"UTC"}).format(d).toUpperCase(),
+    day:d.getUTCDate(),
+    dow:new Intl.DateTimeFormat("en-CA",{weekday:"short",timeZone:"UTC"}).format(d),
+    year:d.getUTCFullYear()
+  };
+}
+function esc(s){
+  return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));
+}
+function repeatLabel(repeat){
+  return ({
+    weekly:"Repeats weekly",
+    biweekly:"Repeats every 2 weeks",
+    triweekly:"Repeats every 3 weeks",
+    sixweekly:"Repeats every 6 weeks",
+    bimonthly:"Repeats every 2 months",
+    quarterly:"Repeats quarterly",
+    annually:"Repeats annually",
+    monthly:"Repeats monthly",
+    lastday:"Repeats monthly · last day"
+  })[repeat]||"";
+}
+
+function chequingDelta(r){return (Number(r.in)||0)+(Number(r.savingsOut)||0)-(Number(r.out)||0)-(Number(r.savingsIn)||0)}
+function savingsDelta(r){return (Number(r.savingsIn)||0)-(Number(r.savingsOut)||0)}
+function computeSavingsThrough(rows,date){
+  let bal=Number(state.savingsOpeningBalance)||0;
+  const start=state.savingsOpeningDate||state.openingDate;
+  for(const r of rows){if(r.effectiveDate>date)break;if(r.effectiveDate>=start)bal+=savingsDelta(r)}
+  return bal;
+}
+function computeBalanceThrough(rows,date){
+  let bal=Number(state.openingBalance)||0;
+  for(const r of rows){
+    if(r.effectiveDate>date)break;
+    bal+=chequingDelta(r);
+  }
+  return bal;
+}
+
+function ensureProjectionDate(){
+  const input=document.getElementById("projectionDate");
+  const stored=localStorage.getItem(PROJECTION_KEY);
+  let chosen=stored||todayISO();
+  if(chosen<state.openingDate)chosen=state.openingDate;
+  input.min=state.openingDate;
+  input.value=chosen;
+  return chosen;
+}
+
+let ledgerVisibleCount=10;
+let ledgerFilter="all";
+let ledgerFromDate=null; // null means today, without storing a stale date
+let ledgerObserver=null;
+
+function render(){
+  const rows=expandTransactions();
+  const today=todayISO();
+
+  const current=computeBalanceThrough(rows,today);
+  const projectionInput=document.getElementById("projectionDate");
+  let projectionDate=projectionInput.value||localStorage.getItem(PROJECTION_KEY)||today;
+  if(projectionDate<state.openingDate)projectionDate=state.openingDate;
+  projectionInput.min=state.openingDate;
+  projectionInput.value=projectionDate;
+  const projected=computeBalanceThrough(rows,projectionDate);
+  const savingsProjectionInput=document.getElementById("savingsProjectionDate");
+  const savingsStart=state.savingsOpeningDate||state.openingDate;
+  let savingsProjectionDate=savingsProjectionInput.value||localStorage.getItem(SAVINGS_PROJECTION_KEY)||today;
+  if(savingsProjectionDate<savingsStart)savingsProjectionDate=savingsStart;
+  savingsProjectionInput.min=savingsStart;
+  savingsProjectionInput.value=savingsProjectionDate;
+  const savingsCurrent=computeSavingsThrough(rows,today);
+  const savingsProjected=computeSavingsThrough(rows,savingsProjectionDate);
+
+  let bal=Number(state.openingBalance)||0;
+  const visibleRows=[];
+  for(const r of rows){
+    if(r.effectiveDate>=state.openingDate)bal+=chequingDelta(r);
+    const kind=(Number(r.savingsIn)||0)>0||(Number(r.savingsOut)||0)>0?"savings":(Number(r.in)||0)>0?"credit":"debit";
+    if(r.effectiveDate>=(ledgerFromDate||today)&&(ledgerFilter==="all"||ledgerFilter===kind)) visibleRows.push({r,balance:bal});
+  }
+
+  const shown=visibleRows.slice(0,ledgerVisibleCount);
+  const html=shown.map(({r,balance})=>{
+    const adjusted=r.effectiveDate!==r.date;
+    const p=dateParts(r.effectiveDate);
+    const isSavings=(Number(r.savingsIn)||0)>0||(Number(r.savingsOut)||0)>0;
+    const amount=chequingDelta(r);
+    const savingsTag=isSavings?`<div class="tx-note savings-tag">${(Number(r.savingsIn)||0)>0?"Savings in":"Savings out"}</div>`:"";
+    const negative=r.effectiveDate>today&&balance<0;
+    const note=adjusted
+      ? `from ${prettyDate(r.date)}<br>(weekend adjustment)`
+      : (r.generated||r.repeat!=="none" ? repeatLabel(r.repeat) : "");
+    return `<article class="tx-row ${r.effectiveDate===today?"today":""} ${negative?"negative-balance":""}">
+      <div class="date-card" aria-label="${esc(prettyDate(r.effectiveDate))}">
+        <div class="mon">${esc(p.mon)}</div>
+        <div class="day">${p.day}</div>
+        <div class="dow">${esc(p.dow)}</div>
+        <div class="year">${p.year}</div>
+      </div>
+      <div class="tx-main">
+        <div class="tx-name" title="${esc(r.name)}">${esc(r.name)}</div>
+        ${savingsTag}${note?`<div class="tx-note">${note}</div>`:""}
+      </div>
+      <div class="tx-money">
+        <div class="tx-amount ${amount>=0?"in":"out"}">${amount>=0?"+":""}${money(amount)}</div>
+        <div class="tx-balance">${negative?`<span class="balance-hazard" aria-label="Negative projected chequing balance" title="Negative projected chequing balance">&#9888;</span>`:""}${money(balance)}</div>
+      </div>
+      <button class="editbtn" data-parent="${r.parentId}" data-occurrence="${r.instanceDate}" aria-label="Edit ${esc(r.name)}">
+        <img class="wayward-action-icon" src="./oracle-pencil-pink.png" alt="" aria-hidden="true">
+      </button>
+    </article>`;
+  }).join("");
+
+  const ledger=document.getElementById("ledger");
+  ledger.innerHTML=html||'<div class="empty">No transactions yet. Add one and the prophecy begins. 🔮</div>';
+
+  if(ledgerObserver){ ledgerObserver.disconnect(); ledgerObserver=null; }
+  if(visibleRows.length>shown.length){
+    const sentinel=document.createElement("div");
+    sentinel.id="ledgerSentinel";
+    sentinel.setAttribute("aria-hidden","true");
+    sentinel.style.height="1px";
+    ledger.appendChild(sentinel);
+    ledgerObserver=new IntersectionObserver(entries=>{
+      if(entries.some(e=>e.isIntersecting)){
+        ledgerVisibleCount+=10;
+        render();
+      }
+    },{rootMargin:"220px 0px"});
+    ledgerObserver.observe(sentinel);
+  }
+  document.getElementById("currentSummary").textContent=money(current);
+  document.getElementById("currentDateLabel").textContent=`as of ${prettyDate(today)}`;
+  document.getElementById("projectedSummary").textContent=money(projected);
+  document.getElementById("projectionDateLabel").textContent=`as of ${prettyDate(projectionDate)}`;
+  document.getElementById("savingsCurrentSummary").textContent=money(savingsCurrent);
+  document.getElementById("savingsCurrentDateLabel").textContent=`as of ${prettyDate(today)}`;
+  document.getElementById("savingsProjectedSummary").textContent=money(savingsProjected);
+  document.getElementById("savingsProjectionDateLabel").textContent=`as of ${prettyDate(savingsProjectionDate)}`;
+
+  document.querySelectorAll(".editbtn").forEach(b=>b.addEventListener("click",()=>openEdit(b.dataset.parent,b.dataset.occurrence)));
+}
+
+const txDialog=document.getElementById("txDialog");
+const txForm=document.getElementById("txForm");
+const repeatSel=document.getElementById("txRepeat");
+const txOut=document.getElementById("txOut");
+const txIn=document.getElementById("txIn");
+
+const txSavingsIn=document.getElementById("txSavingsIn");
+const txSavingsOut=document.getElementById("txSavingsOut");
+const amountInputs=[txOut,txIn,txSavingsIn,txSavingsOut];
+function syncMoneyDirection(){
+  const active=amountInputs.filter(el=>el.value.trim()!=="");
+  // Preserve imported legacy mixed records until explicitly edited.
+  for(const el of amountInputs)el.disabled=active.length===1&&active[0]!==el;
+}
+for(const el of amountInputs)el.addEventListener("input",syncMoneyDirection);
+
+function toggleUntil(){
+  document.getElementById("repeatUntilWrap").style.display=repeatSel.value==="none"?"none":"block";
+}
+repeatSel.addEventListener("change",toggleUntil);
+
+let editContext=null;
+const scopePanel=document.getElementById("txScopePanel");
+function scopeValue(){return document.querySelector('input[name="txScope"]:checked')?.value||"one"}
+function showScope(recurring){
+  scopePanel.style.display=recurring?"block":"none";
+  document.querySelector('input[name="txScope"][value="one"]').checked=true;
+}
+function uuid(){return crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random()}
+function readForm(){
+  const name=document.getElementById("txName").value.trim();
+  const date=document.getElementById("txDate").value;
+  const out=Number(txOut.value)||0,inc=Number(txIn.value)||0;
+  const savingsIn=Number(txSavingsIn.value)||0,savingsOut=Number(txSavingsOut.value)||0;
+  if(!name||!date){alert("Please add an item name and date.");return null}
+  if([out,inc,savingsIn,savingsOut].filter(v=>v>0).length!==1){
+    alert("Enter a positive amount in exactly one of the four fields.");return null;
+  }
+  const repeat=repeatSel.value;
+  const until=repeat==="none"?"":(document.getElementById("txUntil").value||addDays(date,365));
+  if(repeat!=="none"&&until<date){alert("Generate-through date must be on or after the start date.");return null}
+  return {name,date,out,in:inc,savingsIn,savingsOut,repeat,until};
+}
+function valuesForOccurrence(tx,occurrence){
+  return {...tx,...(tx.overrides?.[occurrence]||{}),date:tx.overrides?.[occurrence]?.date||occurrence};
+}
+document.getElementById("addBtn").addEventListener("click",()=>{
+  editContext=null;txForm.reset();
+  document.getElementById("txId").value="";
+  document.getElementById("txTitle").textContent="Add transaction";
+  document.getElementById("txDate").value=todayISO();
+  document.getElementById("deleteBtn").style.display="none";
+  showScope(false);syncMoneyDirection();toggleUntil();txDialog.showModal();
+});
+function openEdit(id,occurrence){
+  const tx=state.transactions.find(t=>t.id===id);
+  if(!tx)return;
+  const nominal=occurrence||tx.date;
+  const value=valuesForOccurrence(tx,nominal);
+  editContext={id,occurrence:nominal};
+  document.getElementById("txId").value=tx.id;
+  document.getElementById("txTitle").textContent="Edit transaction";
+  document.getElementById("txName").value=value.name;
+  document.getElementById("txDate").value=value.date;
+  txOut.value=value.out||"";txIn.value=value.in||"";
+  txSavingsIn.value=value.savingsIn||"";txSavingsOut.value=value.savingsOut||"";
+  repeatSel.value=tx.repeat||"none";
+  document.getElementById("txUntil").value=tx.until||"";
+  document.getElementById("deleteBtn").style.display="inline-block";
+  showScope((tx.repeat||"none")!=="none");
+  syncMoneyDirection();toggleUntil();txDialog.showModal();
+}
+function confirmHistory(action){
+  return confirm(`${action} ALL occurrences, including past transactions? This deliberately changes historical records.`);
+}
+// All split segments retain a stable family identity, including older imported records.
+function familyId(tx){return tx.groupId||tx.id}
+function familyMembers(tx){
+  const family=familyId(tx);
+  return state.transactions.filter(t=>familyId(t)===family).sort((a,b)=>a.date.localeCompare(b.date));
+}
+function seriesSplit(tx,occurrence,values,remove){
+  const dates=scheduledDates(tx);
+  const idx=dates.indexOf(occurrence);
+  if(idx<0)return false;
+  const earlier=dates.slice(0,idx);
+  const family=familyId(tx);
+  const members=familyMembers(tx);
+  // Preserve the family's original forecast horizon, even after earlier splits.
+  // The selected segment's until date may end before a later segment does.
+  const lastDate=members.flatMap(t=>scheduledDates(t)).reduce(
+    (latest,d)=>d>latest?d:latest,occurrence);
+  const originalOverrides={...(tx.overrides||{})};
+  // Remove all later segments in this family; they are superseded by this edit.
+  state.transactions=state.transactions.filter(t=>
+    t.id===tx.id||familyId(t)!==family||t.date<occurrence);
+  if(earlier.length){
+    tx.until=earlier[earlier.length-1];
+    const allowed=new Set(earlier);
+    tx.overrides=Object.fromEntries(Object.entries(originalOverrides)
+      .filter(([d])=>allowed.has(d)));
+  }else{
+    state.transactions=state.transactions.filter(t=>t.id!==tx.id);
+  }
+  if(remove)return true;
+  // A newer future-wide edit supersedes ALL previous one-off exceptions
+  // within its scope, including exceptions from the selected segment.
+  // Keep only earlier exceptions on the historical segment above.
+  const shiftedDays=Math.round((parseISO(values.date)-parseISO(occurrence))/86400000);
+  const inheritedUntil=addDays(lastDate,shiftedDays);
+  const replacement={...values,id:uuid(),groupId:family,
+    until:values.repeat==="none"?"":inheritedUntil,overrides:{}};
+  if(replacement.repeat!=="none"&&replacement.until<replacement.date)
+    replacement.until=replacement.date;
+  state.transactions.push(replacement);
+  return true;
+}
+function replaceEntireFamily(tx,occurrence,values){
+  const members=familyMembers(tx);
+  const earliest=members[0];
+  const family=familyId(tx);
+  const originalDates=members.flatMap(t=>scheduledDates(t));
+  const lastDate=originalDates.reduce((max,d)=>d>max?d:max,earliest.date);
+  // Apply the selected occurrence's date shift to the earliest series anchor.
+  // For month-based recurrences retain the month offset and new day of month.
+  const monthly=["monthly","bimonthly","quarterly","annually","lastday"].includes(values.repeat);
+  let anchor;
+  if(monthly){
+    const a=parseISO(earliest.date),b=parseISO(occurrence),v=parseISO(values.date);
+    const monthOffset=(b.getUTCFullYear()-a.getUTCFullYear())*12+b.getUTCMonth()-a.getUTCMonth();
+    anchor=nextCalendarInterval(values.date,-monthOffset,v.getUTCDate());
+    if(values.repeat==="lastday"){
+      const d=parseISO(anchor);anchor=`${d.getUTCFullYear()}-${String(d.getUTCMonth()+1).padStart(2,"0")}-${String(daysInMonth(d.getUTCFullYear(),d.getUTCMonth()+1)).padStart(2,"0")}`;
+    }
+  }else{
+    const delta=Math.round((parseISO(values.date)-parseISO(occurrence))/86400000);
+    anchor=addDays(earliest.date,delta);
+  }
+  const delta=Math.round((parseISO(anchor)-parseISO(earliest.date))/86400000);
+  const until=values.repeat==="none"?"":(values.until&&values.until!==tx.until?values.until:addDays(lastDate,delta));
+  state.transactions=state.transactions.filter(t=>familyId(t)!==family);
+  state.transactions.push({...values,id:family,groupId:family,date:anchor,until,overrides:{}});
+}
+txForm.addEventListener("submit",e=>{
+  e.preventDefault();
+  const values=readForm();if(!values)return;
+  if(!editContext){
+    state.transactions.push({...values,id:uuid(),overrides:{}});
+  }else{
+    const tx=state.transactions.find(t=>t.id===editContext.id);
+    if(!tx)return;
+    const occurrence=editContext.occurrence;
+    if((tx.repeat||"none")==="none"){
+      Object.assign(tx,values);
+    }else{
+      const scope=scopeValue();
+      if(scope==="all"){
+        if(!confirmHistory("Edit"))return;
+        replaceEntireFamily(tx,occurrence,values);
+      }else if(scope==="one"){
+        // An override is keyed to the original schedule date, even if its date changes.
+        // Repeat settings belong to the series, not a single occurrence.
+        tx.overrides=tx.overrides||{};
+        tx.overrides[occurrence]={name:values.name,date:values.date,out:values.out,
+          in:values.in,savingsIn:values.savingsIn,savingsOut:values.savingsOut};
+      }else{
+        seriesSplit(tx,occurrence,values,false);
+      }
+    }
+  }
+  txDialog.close();save();
+});
+document.getElementById("deleteBtn").addEventListener("click",()=>{
+  if(!editContext)return;
+  const tx=state.transactions.find(t=>t.id===editContext.id);
+  if(!tx)return;
+  const scope=(tx.repeat||"none")==="none"?"all":scopeValue();
+  if(scope==="all"){
+    if((tx.repeat||"none")!=="none"&&!confirmHistory("Delete"))return;
+    if((tx.repeat||"none")==="none"&&!confirm(`Delete "${tx.name}"?`))return;
+    const family=familyId(tx);
+    state.transactions=state.transactions.filter(t=>familyId(t)!==family);
+  }else if(scope==="one"){
+    if(!confirm(`Delete only this occurrence of "${tx.name}"?`))return;
+    tx.overrides=tx.overrides||{};
+    tx.overrides[editContext.occurrence]={deleted:true};
+  }else{
+    if(!confirm(`Delete this and all future occurrences of "${tx.name}"? Earlier entries will remain.`))return;
+    seriesSplit(tx,editContext.occurrence,null,true);
+  }
+  txDialog.close();save();
+});
+document.getElementById("cancelTx").addEventListener("click",()=>txDialog.close());
+
+const openingDialog=document.getElementById("openingDialog");
+function openOpening(){
+  document.getElementById("openingDate").value=state.openingDate||todayISO();
+  document.getElementById("openingBalance").value=state.openingBalance||0;
+  openingDialog.showModal();
+}
+
+document.getElementById("openingCardBtn").addEventListener("click",openOpening);
+
+document.getElementById("openingForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  state.openingDate=document.getElementById("openingDate").value;
+  state.openingBalance=Number(document.getElementById("openingBalance").value)||0;
+  const projection=document.getElementById("projectionDate");
+  if(projection.value<state.openingDate){
+    projection.value=state.openingDate;
+    localStorage.setItem(PROJECTION_KEY,state.openingDate);
+  }
+  openingDialog.close();
+  save();
+});
+document.getElementById("cancelOpening").addEventListener("click",()=>openingDialog.close());
+
+const savingsOpeningDialog=document.getElementById("savingsOpeningDialog");
+document.getElementById("savingsOpeningCardBtn").addEventListener("click",()=>{
+  document.getElementById("savingsOpeningDate").value=state.savingsOpeningDate||state.openingDate;
+  document.getElementById("savingsOpeningBalance").value=state.savingsOpeningBalance||0;
+  savingsOpeningDialog.showModal();
+});
+document.getElementById("savingsOpeningForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  state.savingsOpeningDate=document.getElementById("savingsOpeningDate").value;
+  state.savingsOpeningBalance=Number(document.getElementById("savingsOpeningBalance").value)||0;
+  savingsOpeningDialog.close();save();
+});
+document.getElementById("cancelSavingsOpening").addEventListener("click",()=>savingsOpeningDialog.close());
+const savingsProjectionInput=document.getElementById("savingsProjectionDate");
+savingsProjectionInput.addEventListener("change",()=>{
+  if(savingsProjectionInput.value){localStorage.setItem(SAVINGS_PROJECTION_KEY,savingsProjectionInput.value);render()}
+});
+document.getElementById("savingsProjectionCalendarBtn").addEventListener("click",()=>{
+  if(typeof savingsProjectionInput.showPicker==="function")savingsProjectionInput.showPicker();
+  else savingsProjectionInput.focus();
+});
+document.querySelectorAll(".ledger-filter").forEach(btn=>btn.addEventListener("click",()=>{
+  ledgerFilter=btn.dataset.filter;ledgerVisibleCount=10;
+  document.querySelectorAll(".ledger-filter").forEach(b=>{
+    b.classList.toggle("active",b===btn);b.setAttribute("aria-pressed",String(b===btn));
+  });render();
+}));
+const projectionDate=document.getElementById("projectionDate");
+projectionDate.addEventListener("change",()=>{
+  if(projectionDate.value){
+    localStorage.setItem(PROJECTION_KEY,projectionDate.value);
+    render();
+  }
+});
+document.getElementById("projectionCalendarBtn").addEventListener("click",()=>{
+  if(typeof projectionDate.showPicker==="function")projectionDate.showPicker();
+  else projectionDate.focus();
+});
+
+document.getElementById("exportBtn").addEventListener("click",()=>{
+  const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement("a");
+  a.href=url;
+  a.download=`chequebook-prophecy-backup-${todayISO()}.json`;
+  a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),500);
+});
+
+document.getElementById("importFile").addEventListener("change",async e=>{
+  const f=e.target.files?.[0];
+  if(!f)return;
+  try{
+    const x=JSON.parse(await f.text());
+    if(!x||!Array.isArray(x.transactions))throw new Error();
+    if(confirm("Replace this app's current data with the imported backup?")){
+      state=x;
+      save();
+    }
+  }catch(err){
+    alert("That file does not look like a valid Prophetic Oracle backup.");
+  }
+  e.target.value="";
+});
+
+const ledgerFromInput=document.getElementById("ledgerFromDate");
+const ledgerCalendarBtn=document.getElementById("ledgerCalendarBtn");
+ledgerFromInput.value=todayISO();
+ledgerCalendarBtn.addEventListener("click",()=>{
+  ledgerFromInput.value=ledgerFromDate||todayISO();
+  if(typeof ledgerFromInput.showPicker==="function"){
+    try{ledgerFromInput.showPicker();return;}catch(e){}
+  }
+  ledgerFromInput.style.pointerEvents="auto";
+  ledgerFromInput.focus();
+  ledgerFromInput.click();
+  ledgerFromInput.style.pointerEvents="none";
+});
+ledgerFromInput.addEventListener("change",()=>{
+  ledgerFromDate=ledgerFromInput.value||null;
+  ledgerVisibleCount=10;
+  render();
+});
+ensureProjectionDate();
+const initialSavingsDate=localStorage.getItem(SAVINGS_PROJECTION_KEY)||todayISO();
+document.getElementById("savingsProjectionDate").value=initialSavingsDate;
+if("serviceWorker" in navigator)navigator.serviceWorker.register("sw-v54.js",{updateViaCache:"none"}).catch(()=>{});
+render();
+})();
+</script>
+</body>
+</html>
